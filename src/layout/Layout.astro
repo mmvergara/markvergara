@@ -1,0 +1,39 @@
+---
+import HeaderNav from "./HeaderNav.astro";
+
+const { title } = Astro.props as { title?: string };
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <HeaderNav />
+    <main class="pt-[30px] md:pt-[130px]">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+  html {
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+  }
+  body {
+    background-image: linear-gradient(to top, hsl(215, 21%, 15%), #0d1117);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+  }
+
+</style>
