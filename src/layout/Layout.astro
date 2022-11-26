@@ -1,20 +1,31 @@
 ---
 import HeaderNav from "./HeaderNav.astro";
+interface Props {
+  title?: string;
+  contentDescription?: string;
+}
 
-const { title } = Astro.props as { title?: string };
+const { title, contentDescription } = Astro.props as Props;
+const canonicalURL = new URL(Astro.url).href;
 ---
 
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
+
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='sitemap' href='/sitemap-index.xml' />
+    <link rel='canonical' href={canonicalURL} />
+
+    <meta name='description' content={contentDescription} />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
+
     <title>{title}</title>
   </head>
   <body>
     <HeaderNav />
-    <main class="pt-[30px] md:pt-[130px]">
+    <main class='pt-[30px] md:pt-[130px]'>
       <slot />
     </main>
   </body>
@@ -35,5 +46,4 @@ const { title } = Astro.props as { title?: string };
     background-attachment: fixed;
     margin: 0;
   }
-
 </style>
