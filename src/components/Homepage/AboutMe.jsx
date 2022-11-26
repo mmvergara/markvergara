@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-const AboutMe: React.FC = () => {
+const AboutMe = () => {
   return (
     <motion.section
       id='AboutMe'
