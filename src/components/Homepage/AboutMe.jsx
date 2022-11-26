@@ -7,10 +7,9 @@ const AboutMe = () => {
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.5 }}
       viewport={{ once: true }}
-      suppressHydrationWarning
       className='text-white sm:pl-12 w-[100%] flex flex-col md:flex-row justify-between gap-8 items-center pt-[60px] md:pt-[300px]'
     >
-      <div suppressHydrationWarning>
+      <div>
         <img
           src='/userImg.png'
           alt='developer image'
@@ -20,7 +19,7 @@ const AboutMe = () => {
         />
       </div>
 
-      <div suppressHydrationWarning>
+      <div>
         <p className='text-lg text-gray-300'>
           Hello! My name is Mark Matthew Vergara, <br /> <br /> I enjoy creating things that will
           introduces me to new technologies. Since i was 6 years old technology has always been my
