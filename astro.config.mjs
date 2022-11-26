@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 import compress from "astro-compress";
 
 export default defineConfig({
-  site: "https://markvergara.vercel.app/",
+  site: "https://markvergara.vercel.app",
   base: "/",
   integrations: [
     tailwind(),

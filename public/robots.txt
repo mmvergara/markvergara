@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://markvergara.vercel.app/sitemap-index.xml
