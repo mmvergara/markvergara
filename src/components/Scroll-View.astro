@@ -1,17 +1,25 @@
+---
+interface Props {
+  customClasses?: string;
+}
+
+const { customClasses } = Astro.props as Props;
+---
+
 <script>
   const el = document.querySelectorAll(".hiddenView")!;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("showView");
-        observer.unobserve(entry.target)
+        observer.unobserve(entry.target);
       }
     });
   });
   el.forEach((el) => observer.observe(el));
 </script>
 
-<div class='hiddenView'>
+<div class={`hiddenView ${customClasses || ""}`}>
   <slot />
 </div>
 

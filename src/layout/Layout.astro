@@ -46,4 +46,11 @@ const canonicalURL = new URL(Astro.url).href;
     background-attachment: fixed;
     margin: 0;
   }
+
+  img {
+    -webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+  }
 </style>

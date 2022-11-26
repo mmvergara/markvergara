@@ -1,50 +1,68 @@
 ---
 import ScrollView from "../Scroll-View.astro";
+import { Image } from "@astrojs/image/components";
 ---
 
 <section
   id='AboutMe'
-  class='text-white sm:pl-12 w-[100%] flex flex-col md:flex-row justify-between gap-8 items-center pt-[60px] md:pt-[300px]'
+  class='text-white w-[100%] flex flex-col justify-between gap-8 items-center pt-[60px] md:pt-[190px] lg:pt-[300px]'
 >
   <ScrollView>
-    <img
-      src='/userImg.png'
-      alt='developer image'
-      class='max-h-[300px] min-h-[300px] max-w-[300px] min-w-[300px] rounded-full'
-      width='300px'
-      height='300px'
-    />
+    <h2 class='text-6xl mb-2 text-crownBlue'>About Me</h2>
   </ScrollView>
 
-  <ScrollView>
-    <p class='text-lg text-gray-300'>
-      Hello! My name is Mark Matthew Vergara, <br />
-      <br /> I enjoy creating things that introduce me to new technologies. Since i was 6 years old technology
-      has always been my forte and I started my{" "}
-      <a
-        href='https://github.com/mmvergara/mmvergara/blob/main/journey/README.md'
-        target='_blank'
-        class='text-purple-500'
-      >
-        Web Development Journey{" "}
-      </a>
-      in January 2022. I am currently a 2nd year BS Information Technology Student. School gave me a
-      starting point but majority of my Web Development knowledge is self-taught <br />{" "}
-      <br /> One thing you should know about me is that I like to keep track of my
+  <ScrollView customClasses='flex flex-col md:flex-row gap-8 text-center md:text-left'>
+    <div>
+      <Image
+        src={import("../../images/Vergara.png")}
+        class='rounded-full overflow-hidden inline-flex min-h-[300px] min-w-[300px]'
+        alt='Image r'
+        aspectRatio='1:1'
+        widths={[320]}
+        loading='eager'
+        sizes='320px'
+        width={320}
+        height={320}
+      />
+    </div>
 
-      <a
-        href='https://github.com/mmvergara/mmvergara/blob/main/journey/README.md'
-        target='_blank'
-        class='text-purple-500'
-      >
-        progress
-      </a>
-      and <a href='https://mmv-docs.vercel.app/' target='_blank' class='text-purple-500'>document</a
-      >
-      my work. Seeing what I've done and how much I improved gives me so much motivation to do better
-      in the future <br />
-      <br />I am now looking for low-paying or freelance jobs to prepare myself after I graduate in
-      2025.
-    </p>
+    <div>
+      <p class='text-lg text-gray-300'>
+        Hello! My name is Mark Matthew Vergara, <br />
+        <br /> I enjoy creating things that introduce me to new technologies. Since i was 6 years old
+        technology has always been my forte and I started my{" "}
+        <a
+          href='https://github.com/mmvergara/mmvergara/blob/main/journey/README.md'
+          target='_blank'
+          class='text-purple-500'
+        >
+          Web Development Journey{" "}
+        </a>
+        in January 2022. I am currently a 2nd year BS Information Technology Student. School gave me
+        a starting point but majority of my Web Development knowledge is self-taught <br />{" "}
+        <br /> One thing you should know about me is that I like to keep track of my
+
+        <a
+          href='https://github.com/mmvergara/mmvergara/blob/main/journey/README.md'
+          target='_blank'
+          class='text-purple-500'
+        >
+          progress
+        </a>
+        and <a href='https://mmv-docs.vercel.app/' target='_blank' class='text-purple-500'
+          >document</a
+        >
+        my work. Seeing what I've done and how much I improved gives me so much motivation to do better
+        in the future <br />
+        <br />I am now looking for low-paying or freelance jobs to prepare myself after I graduate
+        in 2025.
+      </p>
+    </div>
   </ScrollView>
 </section>
+
+<style>
+  h2 {
+    font-family: "Poppins", sans-serif;
+  }
+</style>

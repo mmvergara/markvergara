@@ -1,0 +1,22 @@
+---
+import { Image } from "@astrojs/image/components";
+import ScrollView from "./Scroll-View.astro";
+---
+
+<ScrollView customClasses=' w-[320px]'>
+  <div class="w-[320px]  bg-red-500 rounded-md  hover:scale-105 transition-all ease-in duration-75">
+    
+    <Image
+    src={import("../images/ProjectCard.png")}
+    class='rounded-t-md overflow-hidden inline-flex min-w-[300px] '
+    alt='Project Image'
+    widths={[320]}
+    loading='eager'
+    width={320}
+    height={183}
+    />
+    <div>dsfasd</div>
+  </div>
+</ScrollView>
+
+<style></style>
