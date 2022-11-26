@@ -19,7 +19,7 @@ const AboutMe = () => {
         />
       </div>
 
-      <div className=''>
+      <div>
         <p className='text-lg text-gray-300'>
           Hello! My name is Mark Matthew Vergara, <br /> <br /> I enjoy creating things that will
           introduces me to new technologies. Since i was 6 years old technology has always been my
