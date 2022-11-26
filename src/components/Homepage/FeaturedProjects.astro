@@ -8,11 +8,13 @@ import ScrollView from "../Scroll-View.astro";
   class='text-white w-[100%] flex flex-col justify-between gap-8 items-center pt-[60px] md:pt-[190px] lg:pt-[300px]'
 >
   <ScrollView customClasses='text-center w-[100%] '>
-    <h2 class='text-4xl sm:text-6xl text-purple-500 mb-4'>Featured Projects</h2>
-    <p class='text-lg'>These are the notable projects i made</p>
+    <h2 class='text-4xl sm:text-6xl text-purple-500 mb-4 font-Poppins font-semibold'>
+      Featured Projects
+    </h2>
+    <p class='text-lg'>These are the notable projects i made throughout my journey.</p>
   </ScrollView>
 
-  <div class='flex justify-center flex-wrap gap-[20px]'>
+  <div class='flex justify-center flex-wrap gap-[60px]'>
     <ProjectCard />
     <ProjectCard />
     <ProjectCard />
@@ -24,9 +26,3 @@ import ScrollView from "../Scroll-View.astro";
     <ProjectCard />
   </div>
 </section>
-
-<style>
-  h2 {
-    font-family: "Poppins", sans-serif;
-  }
-</style>
