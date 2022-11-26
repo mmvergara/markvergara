@@ -1,0 +1,27 @@
+<script>
+  const el = document.querySelectorAll(".hiddenView")!;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("showView");
+        observer.unobserve(entry.target)
+      }
+    });
+  });
+  el.forEach((el) => observer.observe(el));
+</script>
+
+<div class='hiddenView'>
+  <slot />
+</div>
+
+<style>
+  .hiddenView {
+    opacity: 0;
+
+    transition: all 1s;
+  }
+  .showView {
+    opacity: 1;
+  }
+</style>
