@@ -19,7 +19,6 @@
     "@types/react-dom": "^18.0.9",
     "astro": "^1.6.10",
     "astro-compress": "^1.1.11",
-    "astro-icon": "^0.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.3",

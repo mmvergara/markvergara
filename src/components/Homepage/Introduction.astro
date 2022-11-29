@@ -1,3 +1,7 @@
+---
+import ScrollView from "../Scroll-View.astro";
+---
+
 <section
   class='text-white pl-6 w-[100%] flex flex-col md:flex-row justify-between items-center mt-0 md:mt-28'
 >
@@ -8,14 +12,16 @@
       new things
     </p>
   </div>
-  <ul class='homeNavUl w-[285px] ml-4'>
+  <ul class='homeNavUl bounce w-[285px] ml-4'>
     <li><a class='text-2xl' href='#AboutMe'>About me</a></li>
     <li><a class='text-2xl' href='#FeaturedProjects'>Featured Projects</a></li>
     <li><a class='text-2xl' href='#Skills'>Skills and Tools</a></li>
   </ul>
   <div class='max-w-[500px] hidden md:pl-6 md:block'>
-    <h2 class='text-6xl mb-2 text-yellow-500 font-Poppins font-semibold'>Hi There!</h2>
-    <p class='text-gray-200'>
+    <h2 class='text-6xl mb-2 text-yellow-500 font-Poppins font-semibold hithere inline-block'>
+      Hi There!
+    </h2>
+    <p class='text-gray-200 fadeIn'>
       I'm Mark, a Web Developer based in Philippines! I like to explore new technologies and try out
       new things!
     </p>
@@ -23,6 +29,62 @@
 </section>
 
 <style>
+  .bounce {
+    animation: bounce 2s ease;
+    animation-delay:1s;
+  }
+  .fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: skewY(-15deg) translateY(0);
+    }
+    40% {
+      transform: skewY(-15deg) translateY(-30px);
+    }
+    60% {
+      transform: skewY(-15deg) translateY(-15px);
+    }
+  }
+  .hithere {
+    animation: hithere 1s ease;
+  }
+  @keyframes hithere {
+    30% {
+      transform: scale(1.2);
+    }
+    40%,
+    60% {
+      transform: rotate(-20deg) scale(1.4);
+    }
+    50% {
+      transform: rotate(20deg) scale(1.4);
+    }
+    70% {
+      transform: rotate(0deg) scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   .homeNavUl {
     position: relative;
     transform: skewY(-15deg);

@@ -21,7 +21,7 @@ module.exports = {
         postgresql: "#31648c",
         tailwindcss: "#41a0aa",
         chakraui: "#1e8a81",
-        materaialui: "#0079f2",
+        materialui: "#0079f2",
       },
     },
 

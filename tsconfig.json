@@ -5,8 +5,5 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "types": ["@astrojs/image/client"],
-  "paths": {
-    "@imagesz/*": ["src/images/*"]
-  }
+  "types": ["@astrojs/image/client"]
 }
