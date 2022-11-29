@@ -14,7 +14,7 @@ const { liveUrl, projectType, technologies, title } = props;
   >
     <h2 class='text-[1.1rem] sm:text-[1.2rem] font-Poppins'>{title}</h2>
     <div class='flex mt-2 gap-2'>
-      <a href={githubUrl} target='_blank'
+      <a href={githubUrl} target='_blank' aria-label='Github Repository Link'
         ><svg
           width='24px'
           height='24px'
@@ -28,7 +28,7 @@ const { liveUrl, projectType, technologies, title } = props;
           ></path>
         </svg>
       </a>
-      <a href={liveUrl} target='_blank' class='text-white'>
+      <a href={liveUrl} target='_blank' class='text-white' aria-label='Website Link'>
         <svg
           version='1.1'
           id='Capa_1'
