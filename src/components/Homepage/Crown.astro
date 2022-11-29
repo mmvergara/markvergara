@@ -5,23 +5,22 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setTimeout(()=>{
-
+        setTimeout(() => {
           signature.classList.remove("svgSig");
-        },300)
+        }, 300);
       }
     });
   });
   observer.observe(el);
 </script>
 
-<div>
+<div class="">
   <span class='spanSig'></span>
   <svg
     width='668'
     height='311'
     viewBox='0 0 668 311'
-    class='svgSig'
+    class='svgSig w-[300px] sm:w-auto'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
   >
