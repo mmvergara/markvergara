@@ -1,11 +1,10 @@
 ---
-import { Image } from "@astrojs/image/components";
 import ScrollView from "../Scroll-View.astro";
 import type { ProjectDetails } from "./Projects";
 const { props } = Astro.props as { props: ProjectDetails };
 
 const { deploymentDate, description, documentationLink, githubUrl } = props;
-const { liveUrl, projectType, technologies, title } = props;
+const { liveUrl, technologies, title } = props;
 ---
 
 <ScrollView customClasses=' w-[320px]'>

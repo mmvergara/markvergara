@@ -5,19 +5,18 @@ import Introduction from "../components/Homepage/Introduction.astro";
 import Crown from "../components/Homepage/Crown.astro";
 import ScrollView from "../components/Scroll-View.astro";
 import Layout from "../layout/Layout.astro";
+import ContainerFlexCol from "../layout/ContainerFlexCol.astro";
 ---
 
 <Layout
   title='Mark Vergara | Web Developer'
   contentDescription='Introduction about Mark Matthew Vergara a Web Developer'
 >
-  <div
-    class='text-white text-1xl md:text-2xl max-w-[1200px] p-4 mx-auto gap-[200px] flex flex-col items-center justify-between'
-  >
+  <ContainerFlexCol>
     <Introduction />
     <AboutMe />
     <Crown />
     <FeaturedProjects />
     <ScrollView>1231231231231</ScrollView>
-  </div>
+  </ContainerFlexCol>
 </Layout>

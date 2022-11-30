@@ -1,0 +1,13 @@
+.nice strong {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.nice a {
+  color: #58a6ff;
+
+}
+.nice {
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+}

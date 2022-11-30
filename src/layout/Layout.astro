@@ -3,9 +3,10 @@ import HeaderNav from "./HeaderNav.astro";
 interface Props {
   title?: string;
   contentDescription?: string;
+  customMainTagClasses?:string
 }
 
-const { title, contentDescription } = Astro.props as Props;
+const { title, contentDescription, customMainTagClasses } = Astro.props as Props;
 const canonicalURL = new URL(Astro.url).href;
 ---
 
@@ -16,7 +17,6 @@ const canonicalURL = new URL(Astro.url).href;
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <link rel='sitemap' href='/sitemap-index.xml' />
     <link rel='canonical' href={canonicalURL} />
-
     <meta name='description' content={contentDescription} />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
@@ -25,7 +25,7 @@ const canonicalURL = new URL(Astro.url).href;
   </head>
   <body>
     <HeaderNav />
-    <main class='pt-[30px] md:pt-[130px]'>
+    <main class={`md:pt-[130px] ${customMainTagClasses}`}>
       <slot />
     </main>
   </body>
