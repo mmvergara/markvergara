@@ -1,0 +1,29 @@
+---
+import ScrollView from "../../components/Scroll-View.astro";
+import Layout from "../../layout/Layout.astro";
+
+import ProjectCard from "../../components/ProjectCard/ProjectCard.astro";
+import { MMVProjects } from "../../components/ProjectCard/Projects";
+---
+
+<Layout title='Blog | Mark Vergara' customMainTagClasses='md:pt-2'>
+  <section
+    id='FeaturedProjects'
+    class='text-white w-[100%] flex flex-col justify-between gap-8 max-w-[1200px] mx-auto items-center mt-[10px] sm:mt-[40px]'
+  >
+    <ScrollView customClasses='text-center w-[100%] '>
+      <h2 class='text-4xl sm:text-6xl text-purple-500 mb-4 font-Poppins font-semibold'>Projects</h2>
+      <p class='text-lg'>
+        These are all medium to large size projects. ({MMVProjects.length} Projects) <br />
+
+        <a href='/projects/small' class='text-crownBlue inline-block' target='_blank'
+          >See small projects</a
+        >
+      </p>
+    </ScrollView>
+
+    <div class='flex justify-center flex-wrap gap-[60px]'>
+      {MMVProjects.map((pd) => <ProjectCard props={pd} />)}
+    </div>
+  </section>
+</Layout>

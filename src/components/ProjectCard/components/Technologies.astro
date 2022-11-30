@@ -1,0 +1,53 @@
+---
+import type { technologies } from "../Projects";
+const { technologies } = Astro.props as { technologies: technologies[] };
+---
+
+<>
+  {
+    technologies.map((x) => {
+      const tailwindColor = x.split("-").join("");
+      return (
+        <p class={`text-sm py-[0.09rem] px-2 ${tailwindColor} inline rounded-md font-Poppins`}>
+          {x}
+        </p>
+      );
+    })
+  }
+</>
+
+<style>
+  .nodejs {
+    background-color: #026e00;
+  }
+  .react {
+    background-color: #0595bd;
+  }
+  .typescript {
+    background-color: #2f74c0;
+  }
+  .expressjs {
+    background-color: #2f2f2f;
+  }
+  .mongodb {
+    background-color: #4ba13e;
+  }
+  .firebase {
+    background-color: #ea980b;
+  }
+  .docusaurus {
+    background-color: #2da94a;
+  }
+  .postgresql {
+    background-color: #31648c;
+  }
+  .tailwindcss {
+    background-color: #41a0aa;
+  }
+  .chakraui {
+    background-color: #1e8a81;
+  }
+  .materialui {
+    background-color: #0079f2;
+  }
+</style>

@@ -15,8 +15,8 @@ export interface ProjectDetails {
   title: string;
   description: string;
   githubUrl: string;
-  liveUrl: string;
-  documentationLink: string;
+  liveUrl?: string;
+  documentationLink?: string;
   projectType: "notable" | "featured" | "normal";
   deploymentDate: string;
   technologies: technologies[];
