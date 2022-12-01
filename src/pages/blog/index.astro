@@ -7,7 +7,11 @@ const response = await fetch("https://dev.to/api/articles?username=mmvergara");
 const data = (await response.json()) as BlogListTypes[];
 ---
 
-<Layout title='Blog | Mark Vergara' customMainTagClasses='md:pt-2'>
+<Layout
+  title='Blog | Mark Vergara'
+  contentDescription='I Create blogs to share... pretty much everything i want to share like my works, experiences, handy tips and sometimes some educational content.'
+  customMainTagClasses='md:pt-2'
+>
   <ContainerFlexCol customClasses='gap-0'>
     <ScrollView>
       <h1 class='w-[100%] text-red-500 text-4xl md:text-7xl font-semibold font-Poppins px-4 py-2'>
