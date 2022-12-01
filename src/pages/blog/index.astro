@@ -22,6 +22,7 @@ const data = (await response.json()) as BlogListTypes[];
         <br />
         I Create blogs to share... pretty much everything i want to share like my works, experiences,
         handy tips and sometimes some educational content.
+        <hr class='solid mt-6 opacity-30' />
       </section>
     </ScrollView>
     <ul class='w-[100%]'>
@@ -49,5 +50,8 @@ const data = (await response.json()) as BlogListTypes[];
 <style>
   .blogContainerBg:hover {
     background-color: #1e252e;
+  }
+  hr.solid {
+    border-top: 3px solid rgb(215, 215, 215);
   }
 </style>
