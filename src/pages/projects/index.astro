@@ -6,7 +6,11 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard.astro";
 import { MMVProjects } from "../../components/ProjectCard/Projects";
 ---
 
-<Layout title='Projects | Mark Vergara' contentDescription='Projects made by Vergara, Mark Matthew' customMainTagClasses='md:pt-2'>
+<Layout
+  title='Projects | Mark Vergara'
+  contentDescription='Projects made by Vergara, Mark Matthew'
+  customMainTagClasses='md:pt-2'
+>
   <section
     id='FeaturedProjects'
     class='text-white w-[100%] flex flex-col justify-between gap-8 max-w-[1200px] mx-auto items-center mt-[10px] sm:mt-[40px]'
@@ -16,8 +20,10 @@ import { MMVProjects } from "../../components/ProjectCard/Projects";
       <p class='text-lg'>
         These are all medium to large size projects. ({MMVProjects.length} Projects) <br />
 
-        <a href='/projects/small' class='text-crownBlue inline-block' target='_blank'
-          >See small projects</a
+        <a
+          href='/projects/small'
+          class='scrolll text-crownBlue inline-block overflow-x-scroll max-w-[200px] max-h-[50px]'
+          target='_blank'>See small projects asda ssdas daksd aksdka sdkaskasdka skd</a
         >
       </p>
     </ScrollView>

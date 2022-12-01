@@ -1,13 +1,33 @@
-.nice strong {
+.codeBlockContainer strong {
   font-size: 1.1rem;
   font-weight: bold;
 }
-.nice a {
+.codeBlockContainer a {
   color: #58a6ff;
-
 }
-.nice {
+.codeBlockContainer {
   display: flex;
   gap: 1.2rem;
   flex-direction: column;
+}
+
+.syntaxHighlighting {
+  background-color: #0f172a;
+  padding: 1rem;
+  overflow-x: scroll;
+  border-radius: 0.5rem;
+}
+/* width */
+.syntaxHighlighting::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.syntaxHighlighting::-webkit-scrollbar-track {
+  background: hsl(207, 96%, 11%);
+}
+
+/* Handle */
+.syntaxHighlighting::-webkit-scrollbar-thumb {
+  background: #011627;
 }

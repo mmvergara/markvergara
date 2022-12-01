@@ -7,7 +7,7 @@ import styles from "./markdown.module.css";
 const Markdown = ({ markdown }) => {
   return (
     <span className='text-sm sm:text-lg '>
-      <span className={styles.nice}>
+      <span className={styles.codeBlockContainer}>
         <ReactMarkdown
           children={markdown}
           remarkPlugins={[remarkGfm]}
@@ -16,7 +16,7 @@ const Markdown = ({ markdown }) => {
               const match = /language-(\w+)/.exec(className || "");
               return !inline && match ? (
                 <SyntaxHighlighter
-                  className='bg-slate-900 p-4 rounded-lg overflow-x-scroll' 
+                  className={styles.syntaxHighlighting}
                   children={String(children).replace(/\n$/, "")}
                   style={nightOwl}
                   language='javascript'
