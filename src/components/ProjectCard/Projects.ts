@@ -55,4 +55,22 @@ export const MMVProjects: ProjectDetails[] = [
     deploymentDate: "October 30, 2022",
     technologies: ["react", "chakra-ui", "firebase"],
   },
+  {
+    title: "MMV Docs",
+    description: "Documentations about apps made by Vergara, Mark Matthew",
+    githubUrl: "https://github.com/mmvergara/mmv-docs",
+    liveUrl: "https://mmv-docs.vercel.app/",
+    projectType: "notable",
+    deploymentDate: "November 8, 2022",
+    technologies: ["docusaurus"],
+  },
+  {
+    title: "Javascript Methods in Tagalog",
+    description: "Collection of Javascript methods written in Tagalog / Taglish",
+    githubUrl: "https://github.com/mmvergara/Javascript-Methods-In-Tagalog",
+    liveUrl: "https://javascript-methods-in-tagalog.vercel.app/",
+    deploymentDate: "August 7, 2022",
+    projectType: "notable",
+    technologies: ["docusaurus"],
+  },
 ];
