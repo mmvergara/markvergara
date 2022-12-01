@@ -16,7 +16,7 @@ const Markdown = ({ markdown }) => {
               const match = /language-(\w+)/.exec(className || "");
               return !inline && match ? (
                 <SyntaxHighlighter
-                  className='bg-slate-900 p-4 rounded-lg' 
+                  className='bg-slate-900 p-4 rounded-lg overflow-x-scroll' 
                   children={String(children).replace(/\n$/, "")}
                   style={nightOwl}
                   language='javascript'
