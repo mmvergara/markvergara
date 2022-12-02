@@ -6,6 +6,7 @@
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setTimeout(() => {
+          el.classList.remove("spanSig");
           signature.classList.remove("svgSig");
         }, 300);
       }
@@ -14,7 +15,7 @@
   observer.observe(el);
 </script>
 
-<div class="">
+<div class=''>
   <span class='spanSig'></span>
   <svg
     width='668'
@@ -35,7 +36,12 @@
 <style>
   .svgSig {
     display: none;
+    padding-bottom: 0px;
   }
+  .spanSig {
+    padding-bottom: 200px;
+  }
+
   #mmvergaraSignature {
     stroke-dasharray: 2338.6181640625;
     stroke-dashoffset: 2338.6181640625;
