@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         crownBlue: "#1890bf",
         cardBg: "#1e252e",
-        skillCardBg:"#242d38",
+        skillCardBg:""
 
         nodejs: "#026e00",
         react: "#0595bd",
