@@ -1,0 +1,20 @@
+---
+import Layout from "../layout/Layout.astro";
+---
+
+<Layout title='404 Page Not Found' contentDescription='Requested Page does not exist'>
+  <section class='padding flex flex-col flex-wrap items-center justify-center gap-4'>
+    <h1 class='text-center text-6xl font-Poppins text-white'>404 Error</h1>
+    <p class='text-center text-4xl text-gray-300'>Page Not Found</p>
+    <a href='/' class='text-center text-3xl bg-cardBg text-white inline-block mt-6 p-4 rounded-md'
+      >{">"} Home Page</a
+    >
+  </section>
+</Layout>
+
+<style>
+  .padding {
+    padding-bottom: 40vh;
+    margin-top: 50px;
+  }
+</style>
