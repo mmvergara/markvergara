@@ -2,9 +2,11 @@
   font-size: 1.1rem;
   font-weight: bold;
 }
+
 .codeBlockContainer a {
   color: #58a6ff;
 }
+
 .codeBlockContainer {
   display: flex;
   gap: 1.2rem;
@@ -17,6 +19,7 @@
   overflow-x: scroll;
   border-radius: 0.5rem;
 }
+
 /* width */
 .syntaxHighlighting::-webkit-scrollbar {
   width: 10px;
