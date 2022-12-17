@@ -8,6 +8,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import helmet from "helmet";
 import dotenv from "dotenv";
+import { mailer, makeMail } from "./utilities/mailer";
 dotenv.config();
 
 const app = express();
@@ -23,19 +24,25 @@ app.get("/", (req: req, res: res, next: next) => {
 });
 
 app.put("/sendmessage", limiter, async (req: req, res: res, next: next) => {
+  const discordWebHookUrl = process.env.DISCORD_WEBHOOK_URL;
   const result = messageValidationSchema.validate(req.body);
   const value = result.value as messageInfo;
-  try {
-    const discordWebHookUrl = process.env.DISCORD_WEBHOOK_URL;
-    if (discordWebHookUrl) {
-      await sendDiscordMessage(value, discordWebHookUrl);
-    }
-    if (result.error) throw newError("Bad Request", 400);
 
-    res.status(201).send({ message: "success!", ok: true });
+  try {
+    if (result.error) throw newError("Bad Request", 400);
+    if (discordWebHookUrl) await sendDiscordMessage(value, discordWebHookUrl);
   } catch (error) {
     next(error);
+    return;
   }
+
+  mailer.sendMail(makeMail(value), (err) => {
+    if (err) {
+      res.status(400).send({ message: "Could not send the message", ok: false });
+      return;
+    }
+    res.status(200).send({ message: "success!", ok: true });
+  });
 });
 
 app.use(ErrorHandling);
