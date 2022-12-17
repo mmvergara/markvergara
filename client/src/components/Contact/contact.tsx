@@ -9,6 +9,7 @@ const ContactPage = () => {
     e.preventDefault();
     if (!fullName || !email || !message) {
       alert("Make sure to fill out all of the fields");
+      return;
     }
     console.log("Messsage Form Submit");
     try {
@@ -131,6 +132,7 @@ const ContactPage = () => {
           onChange={(e) => {
             setFullName(e.target.value!);
           }}
+          value={fullName}
           className='bg-skillCardBg p-2 rounded-md w-[300px]'
           placeholder='Full Name'
           type='text'
@@ -139,6 +141,7 @@ const ContactPage = () => {
           onChange={(e) => {
             setEmail(e.target.value!);
           }}
+          value={email}
           className='bg-skillCardBg p-2 rounded-md mt-4 w-[300px]'
           placeholder='Email'
           type='email'
@@ -147,6 +150,7 @@ const ContactPage = () => {
           onChange={(e) => {
             setMessage(e.target.value!);
           }}
+          value={message}
           className='bg-skillCardBg p-2 rounded-md mt-4 resize-none w-[300px]'
           name='messageContent'
           placeholder='Send me a message :)'
