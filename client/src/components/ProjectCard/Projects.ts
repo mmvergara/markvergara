@@ -9,7 +9,8 @@ export type technologies =
   | "postgre-sql"
   | "tailwind-css"
   | "chakra-ui"
-  | "material-ui";
+  | "material-ui"
+  | "daisy-ui";
 
 export interface ProjectDetails {
   title: string;
@@ -54,6 +55,15 @@ export const MMVProjects: ProjectDetails[] = [
     projectType: "featured",
     deploymentDate: "October 30, 2022",
     technologies: ["react", "chakra-ui", "firebase"],
+  },
+  {
+    title: "Algorithm Visualizer",
+    description: "Simple sorting algorithm visualizer using react typescript",
+    deploymentDate: "December 6, 2022",
+    githubUrl: "https://github.com/mmvergara/mmv-algorithm-visualizer",
+    liveUrl: "https://mmv-algorithm-visualizer.vercel.app/",
+    projectType: "normal",
+    technologies: ["react", "typescript", "daisy-ui"],
   },
   {
     title: "MMV Docs",

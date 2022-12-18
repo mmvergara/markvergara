@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         crownBlue: "#1890bf",
         cardBg: "#1e252e",
-        skillCardBg:"#242d38",
+        skillCardBg: "#242d38",
 
         nodejs: "#026e00",
         react: "#0595bd",
@@ -23,6 +23,7 @@ module.exports = {
         tailwindcss: "#41a0aa",
         chakraui: "#1e8a81",
         materialui: "#0079f2",
+        daisyui: "#ebd348",
       },
     },
 
