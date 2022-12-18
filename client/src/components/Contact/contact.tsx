@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 
 const ContactPage = () => {
@@ -13,14 +14,12 @@ const ContactPage = () => {
     }
     console.log("Messsage Form Submit");
     try {
-      await fetch("https://mmv-personal-website-nodejs.onrender.com/sendmessage", {
-        method: "PUT",
-        body: JSON.stringify({
-          fullName,
-          email,
-          message,
-        }),
+      const res = await axios.put("https://mmv-personal-website-nodejs.onrender.com/sendmessage", {
+        fullName,
+        email,
+        message,
       });
+      console.log(res);
       setEmail("");
       setFullName("");
       setMessage("");

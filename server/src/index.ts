@@ -30,6 +30,7 @@ app.put("/sendmessage", limiter, async (req: req, res: res, next: next) => {
   const value = result.value as messageInfo;
 
   try {
+    console.log(result.error)
     if (result.error) throw newError("Bad Request", 400);
     if (discordWebHookUrl) await sendDiscordMessage(value, discordWebHookUrl);
   } catch (error) {
