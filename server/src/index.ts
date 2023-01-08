@@ -38,9 +38,11 @@ app.put("/sendmessage", limiter, async (req: req, res: res, next: next) => {
 
   mailer.sendMail(makeMail(value), (err) => {
     if (err) {
+      console.log(err);
       res.status(400).send({ message: "Could not send the message", ok: false });
       return;
     }
+    console.log(value);
     res.status(200).send({ message: "success!", ok: true });
   });
 });
