@@ -2,17 +2,17 @@
 import Markdown from "../../components/Blog/Markdown";
 import Layout from "../../layout/Layout.astro";
 
-// export async function getStaticPaths() {
-//   const response = await fetch("https://dev.to/api/articles?username=mmvergara");
-//   const data = await response.json();
-//   return data.map((blog: any) => {
-//     return {
-//       params: {
-//         blogId: blog.id,
-//       },
-//     };
-//   });
-// }
+export async function getStaticPaths() {
+  // const response = await fetch("https://dev.to/api/articles?username=mmvergara");
+  // const data = await response.json();
+  return data.map((blog: any) => {
+    return {
+      params: {
+        blogId: 1181072,
+      },
+    };
+  });
+}
 
 const { blogId } = Astro.params;
 const blogRequest = await fetch(`https://dev.to/api/articles/${blogId}`);
