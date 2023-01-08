@@ -6,6 +6,8 @@ export const messageValidationSchema = joi.object({
   message: joi.string().alphanum().min(1).max(30000).required(),
 });
 
-export const secretKeyValidationSchema = joi.object({
-  secretKey: joi.string().required(),
-});
+export type messageBody = {
+  fullName: string;
+  email: string;
+  message: string;
+};

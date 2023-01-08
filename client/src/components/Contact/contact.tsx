@@ -15,7 +15,7 @@ const ContactPage = () => {
     }
     setStatus("Submitting");
     try {
-      await axios.put("https://mmvergara-dev-website-api.onrender.com/sendmessage", {
+      await axios.put("https://mmvergara-dev-website-api.vercel.app/dev-website/contact", {
         fullName,
         email,
         message,
