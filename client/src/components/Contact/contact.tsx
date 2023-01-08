@@ -2,9 +2,10 @@ import axios from "axios";
 import { useState } from "react";
 
 const ContactPage = () => {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [fullName, setFullName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [status, setStatus] = useState<string>("");
 
   const submitMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,30 +20,30 @@ const ContactPage = () => {
         email,
         message,
       });
-      console.log(res);
-      setEmail("");
-      setFullName("");
-      setMessage("");
+      resetForm();
       alert("Message sent successfully!");
     } catch (error) {
       alert("Something wen't wrong | unable to send message");
     }
   };
+
+  const resetForm = () => {
+    setEmail("");
+    setFullName("");
+    setMessage("");
+  };
   return (
     <>
-      <h1
-        className='font-Poppins text-center text-white text-3xl sm:text-5xl md:text-7xl'
-        style={{ color: "#eab308" }}
-      >
+      <h1 className='font-Poppins text-center text-white text-3xl sm:text-5xl md:text-7xl' style={{ color: "#eab308" }}>
         Contact Me
       </h1>
 
-      <section className='text-white bg-skillCardBg p-4 flex flex-col w-[350px] rounded-lg border-b-4 border-cardBg mx-auto mt-8'>
+      <section className='text-white text-sm font-medium bg-skillCardBg p-4 flex flex-col w-[350px] rounded-lg border-b-4 border-cardBg mx-auto mt-8'>
         <p>
           Email
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='inline'
+            className='inline mx-1'
             width='24'
             height='24'
             viewBox='0 0 24 24'
@@ -57,11 +58,7 @@ const ContactPage = () => {
             <polyline points='3 7 12 13 21 7'></polyline>
           </svg>
           :{" "}
-          <a
-            href='mailto:mark.jesusmanabat@gmail.com'
-            aria-label='Email Address'
-            className='text-typescript'
-          >
+          <a href='mailto:mark.jesusmanabat@gmail.com' aria-label='Email Address' className='text-typescript'>
             Mark.jesusmanabat@gmail.com
           </a>
         </p>
@@ -69,7 +66,7 @@ const ContactPage = () => {
           Github
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='inline'
+            className='inline mx-1'
             width='24'
             height='24'
             viewBox='0 0 24 24'
@@ -77,25 +74,20 @@ const ContactPage = () => {
             stroke-width='2'
             fill='none'
             stroke-linecap='round'
-            stroke-linejoin='round'
           >
             <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
             <path d='M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5'></path>
           </svg>
           :{" "}
-          <a
-            href='https://github.com/mmvergara'
-            aria-label='Github Profile'
-            className='text-typescript'
-          >
-            mmvergara
+          <a href='https://github.com/mmvergara' aria-label='Github Profile' className='text-typescript'>
+            @mmvergara
           </a>
         </p>
         <p>
           LinkedIn
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='inline'
+            className='inline mx-1'
             width='24'
             height='24'
             viewBox='0 0 24 24'
@@ -103,7 +95,6 @@ const ContactPage = () => {
             stroke-width='2'
             fill='none'
             stroke-linecap='round'
-            stroke-linejoin='round'
           >
             <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
             <rect x='4' y='4' width='16' height='16' rx='2'></rect>

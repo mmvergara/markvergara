@@ -1,16 +1,14 @@
 import type { Request as req, Response as res, NextFunction as next } from "express";
-import { ErrorHandling, newError } from "./utilities/errorHandling";
-import { messageValidationSchema } from "./utilities/reqBodySchemas";
-import { limiter } from "./utilities/apiLimiter";
-import sendDiscordMessage, { messageInfo } from "./utilities/sendDiscordMessage";
+import sendDiscordMessage, { messageInfo } from "./utilities/send-discord-message";
+import { ErrorHandling, newError } from "./utilities/error-handling";
+import { messageValidationSchema } from "./utilities/req-body-schema";
+import { DISCORD_WEBHOOK_URL } from "./config";
+import { mailer, makeMail } from "./utilities/mailer";
+import { limiter } from "./utilities/api-limiter";
+import bodyParser from "body-parser";
 import express from "express";
 import cors from "cors";
-import bodyParser from "body-parser";
 import helmet from "helmet";
-import dotenv from "dotenv";
-import { mailer, makeMail } from "./utilities/mailer";
-dotenv.config();
-
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -25,12 +23,12 @@ app.get("/", (req: req, res: res, next: next) => {
 });
 
 app.put("/sendmessage", limiter, async (req: req, res: res, next: next) => {
-  const discordWebHookUrl = process.env.DISCORD_WEBHOOK_URL;
+  const discordWebHookUrl = DISCORD_WEBHOOK_URL;
   const result = messageValidationSchema.validate(req.body);
   const value = result.value as messageInfo;
 
   try {
-    console.log(result.error)
+    console.log(result.error);
     if (result.error) throw newError("Bad Request", 400);
     if (discordWebHookUrl) await sendDiscordMessage(value, discordWebHookUrl);
   } catch (error) {

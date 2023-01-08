@@ -2,11 +2,10 @@ import type { Request as req, Response as res, NextFunction as next } from "expr
 
 export const newError = (errorMessage: string, errorCode: number) => {
   const newErr = new Error(errorMessage);
-  //@ts-ignore
+ //@ts-ignore
   newErr.statusCode = errorCode || 500;
   return newErr;
 };
-
 export const ErrorHandling = (error: Error, req: req, res: res, next: next) => {
   //@ts-ignore
   const status = error.statusCode || 500;

@@ -1,16 +1,17 @@
 import nodemailer from "nodemailer";
-import { messageInfo } from "./sendDiscordMessage";
+import { MAILER_EMAIL, MAILER_PASSWORD } from "../config";
+import { messageInfo } from "./send-discord-message";
 
 export const mailer = nodemailer.createTransport({
   service: "hotmail",
   auth: {
-    user: "crownie2003@outlook.com",
-    pass: "crowniemailer1919",
+    user: MAILER_EMAIL,
+    pass: MAILER_PASSWORD,
   },
 });
 export const makeMail = (messageInfo: messageInfo) => {
   return {
-    from: "crownie2003@outlook.com",
+    from: MAILER_EMAIL,
     to: "mark.jesusmanabat@gmail.com",
     subject: "CAREEER MESSAGE!!!! ( PERSONAL WEBSITE MESSAGE )",
     text: `Email: ${messageInfo.email}\n
