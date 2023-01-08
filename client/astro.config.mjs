@@ -4,21 +4,19 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import compress from "astro-compress";
 import image from "@astrojs/image";
+import vercel from "@astrojs/vercel/serverless";
 
+// https://astro.build/config
 export default defineConfig({
   site: "https://markvergara.vercel.app",
   base: "/",
-  integrations: [
-    tailwind(),
-    react(),
-    sitemap(),
-    compress({
-      css: true,
-      html: true,
-      js: true,
-      img: true,
-      svg: true,
-    }),
-    image(),
-  ],
+  integrations: [tailwind(), react(), sitemap(), compress({
+    css: true,
+    html: true,
+    js: true,
+    img: true,
+    svg: true
+  }), image()],
+  output: "server",
+  adapter: vercel()
 });
