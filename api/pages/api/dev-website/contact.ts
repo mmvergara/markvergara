@@ -12,13 +12,15 @@ const cors = Cors({
   methods: ["PUT"],
   origin: "https://markvergara.vercel.app/",
 });
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  await runCorsMiddleware(req, res, cors);
-  if (!allowedMethod(req, "PUT")) return res.status(401).end("Method not allowed");
-  const { error, value } = messageValidationSchema.validate(req.body);
   try {
+    await runCorsMiddleware(req, res, cors);
+    if (!allowedMethod(req, "PUT")) return res.status(401).end("Method not allowed");
     await mongoConnect();
+
     // Validate body
+    const { error, value } = messageValidationSchema.validate(req.body);
     if (error) throw new Error("Invalid request body");
     const message = value as messageBody;
 
