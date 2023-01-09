@@ -1,9 +1,9 @@
 ---
 import Markdown from "../../components/Blog/Markdown";
 import Layout from "../../layout/Layout.astro";
-
+import fetch from "node-fetch";
 export async function getStaticPaths() {
-  const response = await fetch("https://dev.to/api/articles?username=mmvergara");
+  const response = (await fetch("https://dev.to/api/articles?username=mmvergara")) as any;
   const data = await response.json();
   return data.map((blog: any) => {
     return [
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { blogId } = Astro.params;
-const blogRequest = await fetch(`https://dev.to/api/articles/${blogId}`);
+const blogRequest = (await fetch(`https://dev.to/api/articles/${blogId}`)) as any;
 const data = await blogRequest.json();
 ---
 
