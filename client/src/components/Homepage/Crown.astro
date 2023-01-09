@@ -1,7 +1,6 @@
 <script>
   const el = document.querySelector(".spanSig")!;
   const signature = document.querySelector(".svgSig")!;
-  console.log(el);
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
