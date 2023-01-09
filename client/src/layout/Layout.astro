@@ -1,10 +1,10 @@
 ---
 import Footer from "./Footer.astro";
-import HeaderNav from "./HeaderNav.astro";
+import Header from "./Header.astro";
 interface Props {
   title?: string;
   contentDescription?: string;
-  customMainTagClasses?:string
+  customMainTagClasses?: string;
 }
 
 const { title, contentDescription, customMainTagClasses } = Astro.props as Props;
@@ -25,34 +25,32 @@ const canonicalURL = new URL(Astro.url).href;
     <title>{title}</title>
   </head>
   <body>
-    <HeaderNav />
+    <Header />
     <main class={`md:pt-[130px] ${customMainTagClasses}`}>
       <slot />
     </main>
-    <Footer/>
+    <Footer />
   </body>
 </html>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
   html {
     height: 100%;
     font-family: "Inter", sans-serif;
     scroll-behavior: smooth;
   }
   body {
-    background-image: linear-gradient(to top, hsl(215, 21%, 15%), #0d1117);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to top, hsl(214, 21%, 15%), #0d1117);
+    /* background-color: #151b25; */
     background-attachment: fixed;
     margin: 0;
   }
 
-  img {
+  /* img {
     -webkit-backface-visibility: hidden;
-    -ms-transform: translateZ(0); /* IE 9 */
-    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
     transform: translateZ(0);
-  }
+  } */
 </style>

@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon";
+
+export interface Props {
+  title: string;
+  githubUrl?: string;
+  liveUrl?: string;
+  documentationLink?: string;
+}
+const { documentationLink, githubUrl, liveUrl, title } = Astro.props as Props
+---
+
+<>
+  <div class='flex mt-2 gap-2'>
+    {
+      githubUrl && (
+        <a href={githubUrl} aria-label={`${title} repository link`} target='_blank' rel='noopener noreferrer'>
+          <Icon name='mdi:github' class='w-8 h-8 text-white' />
+        </a>
+      )
+    }
+    {
+      liveUrl && (
+        <a href={liveUrl} aria-label={`${title} Live url`} target='_blank' rel='noopener noreferrer'>
+          <Icon name='mdi:link-variant' class='w-8 h-8 text-white' />
+        </a>
+      )
+    }
+    {
+      documentationLink && (
+        <a
+          href={documentationLink}
+          target='_blank'
+          class='text-sm p-1 px-2 bg-slate-700 inline rounded-md font-Poppins'
+          aria-label='Website Documentation Link'
+        >
+          Docs
+        </a>
+      )
+    }
+  </div>
+</>

@@ -1,13 +1,11 @@
 ---
 import ScrollView from "../Scroll-View.astro";
-import DocsUrl from "./components/DocsUrl.astro";
-import GithubUrl from "./components/GithubUrl.astro";
-import LiveUrl from "./components/LiveUrl.astro";
-import Technologies from "./components/Technologies.astro";
+import ProjectCardLinks from "./Project-Card-Links.astro";
+import ProjectCardTechnologies from "./Project-Card-Technologies.astro";
 import type { ProjectDetails } from "./Projects";
 const { props } = Astro.props as { props: ProjectDetails };
-const { deploymentDate, description, documentationLink, githubUrl } = props;
-const { liveUrl, technologies, title } = props;
+const { title, deploymentDate, description } = props;
+const { githubUrl, liveUrl, technologies, documentationLink } = props;
 ---
 
 <ScrollView customClasses=' w-[320px]'>
@@ -15,17 +13,13 @@ const { liveUrl, technologies, title } = props;
     class='w-[320px] flex flex-col bg-cardBg rounded-md hover:scale-105 transition-all ease-in duration-75 border-b-8 border-gray-700 h-[350px] p-4'
   >
     <h2 class='text-[1.1rem] sm:text-[1.2rem] font-Poppins'>{title}</h2>
-    <div class='flex mt-2 gap-2'>
-      <GithubUrl githubUrl={githubUrl} />
-      <LiveUrl liveUrl={liveUrl} />
-      <DocsUrl documentationLink={documentationLink} />
-    </div>
-    <p class='text-sm sm:text-[0.98rem] text-gray-300 leading-tight mt-4'>
+    <ProjectCardLinks title={title} liveUrl={liveUrl} documentationLink={documentationLink} githubUrl={githubUrl} />
+    <p class='text-sm sm:text-[0.98rem] text-gray-300 leading-tight mt-4 font-Inter tracking-wide'>
       {description}
     </p>
     <div class='flex flex-wrap gap-2 mt-auto p-1'>
       <p class='text-sm text-gray-500 leading-tight mt-1 w-[100%]'>{deploymentDate}</p>
-      <Technologies technologies={technologies} />
+      <ProjectCardTechnologies technologies={technologies} />
     </div>
   </article>
 </ScrollView>

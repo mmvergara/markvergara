@@ -4,26 +4,19 @@ module.exports = {
   theme: {
     fontFamily: {
       Poppins: ["Poppins", "sans-serif"],
+      Inter:["Inter", 'sans-serif']
     },
     extend: {
       colors: {
         crownBlue: "#1890bf",
         cardBg: "#1e252e",
         skillCardBg: "#242d38",
+        slate:"#b2becd",
 
-        nodejs: "#026e00",
-        react: "#0595bd",
-        typescript: "#2f74c0",
-        expressjs: "#2f2f2f",
-        mongodb: "#4ba13e",
-        firebase: "#ea980b",
+        chakraUI: "#4db6ac",
+        javascript:"#f0db4f",
+        git:"#f34f29"
 
-        docusaurus: "#2da94a",
-        postgresql: "#31648c",
-        tailwindcss: "#41a0aa",
-        chakraui: "#1e8a81",
-        materialui: "#0079f2",
-        daisyui: "#ebd348",
       },
     },
 

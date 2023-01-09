@@ -1,5 +1,5 @@
 ---
-import type { technologies } from "../Projects";
+import type { technologies } from "./Projects";
 const { technologies } = Astro.props as { technologies: technologies[] };
 ---
 
@@ -7,11 +7,7 @@ const { technologies } = Astro.props as { technologies: technologies[] };
   {
     technologies.map((x) => {
       const tailwindColor = x.split("-").join("");
-      return (
-        <p class={`text-sm py-[0.09rem] px-2 ${tailwindColor} inline rounded-md font-Poppins`}>
-          {x}
-        </p>
-      );
+      return <p class={`text-sm py-[0.09rem] px-2 ${tailwindColor} inline rounded-md font-Poppins`}>{x}</p>;
     })
   }
 </>
