@@ -21,7 +21,6 @@
     "astro": "^1.6.10",
     "astro-compress": "^1.1.11",
     "astro-icon": "^0.8.0",
-    "axios": "^1.2.1",
     "marked": "^4.2.3",
     "node-fetch": "^3.3.0",
     "react": "^18.2.0",
@@ -33,6 +32,6 @@
   },
   "devDependencies": {
     "@types/react-syntax-highlighter": "^15.5.5",
-    "typescript": "^4.9.4"
+    "svgo": "^2.8.0"
   }
 }

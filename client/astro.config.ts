@@ -22,4 +22,9 @@ export default defineConfig({
     }),
     image(),
   ],
+  vite: {
+    ssr: {
+      external: ["svgo"],
+    },
+  },
 });

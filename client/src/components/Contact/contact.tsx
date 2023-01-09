@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState } from "react";
 
 const ContactPage = () => {
@@ -9,22 +8,22 @@ const ContactPage = () => {
 
   const submitMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!fullName || !email || !message) {
-      alert("Make sure to fill out all of the fields");
-      return;
-    }
-    setStatus("Submitting");
-    try {
-      await axios.put("https://mmvergara-dev-website-api.vercel.app/dev-website/contact", {
-        fullName,
-        email,
-        message,
-      });
-      resetForm();
-      setStatus("Message sent successfully!");
-    } catch (error) {
-      setStatus("Something wen't wrong | unable to send message");
-    }
+    // if (!fullName || !email || !message) {
+    //   alert("Make sure to fill out all of the fields");
+    //   return;
+    // }
+    // setStatus("Submitting");
+    // try {
+    //   await axios.put("https://mmvergara-dev-website-api.vercel.app/dev-website/contact", {
+    //     fullName,
+    //     email,
+    //     message,
+    //   });
+    //   resetForm();
+    //   setStatus("Message sent successfully!");
+    // } catch (error) {
+    //   setStatus("Something wen't wrong | unable to send message");
+    // }
   };
 
   const resetForm = () => {
