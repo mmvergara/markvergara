@@ -12,7 +12,6 @@ import ScrollView from "../Scroll-View.astro";
     <h2 class='text-4xl sm:text-6xl text-purple-500 mb-4 font-Poppins font-semibold'>Featured Projects</h2>
     <p class='text-lg'>These are the notable projects i made throughout my journey.</p>
   </ScrollView>
-
   <div class='flex justify-center flex-wrap gap-[60px]'>
     {MMVProjects.filter((pd) => pd.projectType === "featured").map((pd) => <ProjectCard props={pd} />)}
   </div>

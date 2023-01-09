@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon";
-
 export interface Props {
   title: string;
   githubUrl?: string;
@@ -15,7 +14,7 @@ const { documentationLink, githubUrl, liveUrl, title } = Astro.props as Props
     {
       githubUrl && (
         <a href={githubUrl} aria-label={`${title} repository link`} target='_blank' rel='noopener noreferrer'>
-          <Icon name='mdi:link-variant' class='w-8 h-8 text-white' />
+          <Icon name='mdi:github' class='w-8 h-8 text-white' />
         </a>
       )
     }

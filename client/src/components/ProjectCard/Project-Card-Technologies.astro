@@ -6,13 +6,22 @@ const { technologies } = Astro.props as { technologies: technologies[] };
 <>
   {
     technologies.map((x) => {
-      const tailwindColor = x.split("-").join("");
-      return <p class={`text-sm py-[0.09rem] px-2 ${tailwindColor} inline rounded-md font-Poppins`}>{x}</p>;
+      const technology = x.split("-").join("");
+      return <p class={`text-sm py-[0.09rem] px-2 ${technology} inline rounded-md font-Poppins`}>{x}</p>;
     })
   }
 </>
 
-<style>
+<style scoped>
+  .discordjs {
+    background-color: #5560e2;
+  }
+  .supabase {
+    background-color: #3bc389;
+  }
+  .nextjs {
+    background-color: #979696;
+  }
   .nodejs {
     background-color: #026e00;
   }

@@ -10,7 +10,10 @@ export type technologies =
   | "tailwind-css"
   | "chakra-ui"
   | "material-ui"
-  | "daisy-ui";
+  | "daisy-ui"
+  | "nextjs"
+  | "supabase"
+  | "discordjs";
 
 export interface ProjectDetails {
   title: string;
@@ -24,6 +27,17 @@ export interface ProjectDetails {
 }
 
 export const MMVProjects: ProjectDetails[] = [
+  {
+    title: "MMV Dex",
+    description:
+      "A Social Media / Peers App with NextJS Supabase with keyword analysis using postgresql, i made for an onboarding project",
+    githubUrl: "https://github.com/mmvergara/mmv-dex",
+    liveUrl: "http://mmv-dex.vercel.app/",
+    deploymentDate: "January 6, 2023",
+    projectType: "featured",
+    technologies: ["nextjs", "supabase", "postgre-sql", "tailwind-css"],
+    documentationLink: "https://mmv-docs.vercel.app/docs/category/dex-beta",
+  },
   {
     title: "Acrie Shop",
     description:
@@ -42,7 +56,7 @@ export const MMVProjects: ProjectDetails[] = [
     githubUrl: "https://github.com/mmvergara/mmv-boardz",
     liveUrl: "https://mmv-boardz.vercel.app/",
     documentationLink: "https://mmv-docs.vercel.app/docs/category/boardz",
-    projectType: "featured",
+    projectType: "notable",
     deploymentDate: "October 30, 2022",
     technologies: ["material-ui", "react", "typescript", "expressjs", "mongodb"],
   },
@@ -64,6 +78,16 @@ export const MMVProjects: ProjectDetails[] = [
     liveUrl: "https://mmv-algorithm-visualizer.vercel.app/",
     projectType: "normal",
     technologies: ["react", "typescript", "daisy-ui"],
+  },
+  {
+    title: "Nextjs Discord Bot Template",
+    description: "fully functional api based discord bot can be made using nextjs 🤯",
+    deploymentDate: "Deployment Date: Jan 7, 2023",
+    githubUrl: "https://github.com/mmvergara/mmv-nextjs-discord-bot-template",
+    liveUrl: "https://mmv-nextjs-discord-bot-template.vercel.app/",
+    projectType: "normal",
+    technologies: ["nextjs", "discordjs"],
+    documentationLink: "https://mmv-docs.vercel.app/docs/category/nextjs-discord-bot-template",
   },
   {
     title: "MMV Docs",

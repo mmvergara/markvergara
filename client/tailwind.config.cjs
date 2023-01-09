@@ -11,7 +11,7 @@ module.exports = {
         crownBlue: "#1890bf",
         cardBg: "#1e252e",
         skillCardBg: "#242d38",
-        slate:"#b2becd",
+        slateD:"#b2becd",
 
         chakraUI: "#4db6ac",
         javascript:"#f0db4f",
