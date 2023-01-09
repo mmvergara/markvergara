@@ -9,8 +9,8 @@ import mongoConnect from "services/mongodb-connect";
 import Cors from "cors";
 
 const cors = Cors({
-  methods: ["PUT"],
-  origin: "https://markvergara.vercel.app/",
+  methods: ["*"],
+  origin: "*",
 });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
