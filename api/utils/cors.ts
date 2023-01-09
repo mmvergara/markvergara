@@ -1,11 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import Cors from 'cors'
 
-const cors = Cors({
-  methods: ['PUT'],origin:"https://markvergara.vercel.app/"
-})
 
-function runMiddleware(
+export function runCorsMiddleware(
   req: NextApiRequest,
   res: NextApiResponse,
   fn: Function
