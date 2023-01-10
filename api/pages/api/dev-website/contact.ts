@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { messageBody, messageValidationSchema } from "models/req-body-schema";
-import { DISCORD_WEBHOOK_URL } from "config";
+import { DISCORD_WEBHOOK_URL } from "../../../config";
 import { runCorsMiddleware } from "utils/cors";
 import sendDiscordMessage from "utils/send-discord-message";
 import allowedMethod from "utils/error-handling";
@@ -27,10 +27,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Create and save message
     const newMessage = new messageModel({ ...message });
     await newMessage.save();
-
-    res.status(200).send({ message: "Message sent!" });
     if (DISCORD_WEBHOOK_URL) await sendDiscordMessage(message, DISCORD_WEBHOOK_URL);
+    return res.status(200).send({ message: "Message sent!" });
   } catch (error) {
-    res.status(400).send({ message: "Error Occured" });
+    return res.status(400).send({ message: "Error Occured" });
   }
 }

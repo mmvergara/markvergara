@@ -6,14 +6,6 @@ export default function allowedMethod(req: NextApiRequest, allowedMethod: httpMe
   return req.method === allowedMethod;
 }
 
-export const apiError = (e: unknown) => {
-  console.log(e);
-  const error = e as Error & { statusCode: number };
-  return {
-    errData: { error: { message: error.message }, data: null },
-    code: error.statusCode || 400,
-  };
-};
 
 export const newError = (errorMessage: string, errorCode: number) => {
   const newErr = new Error(errorMessage);
