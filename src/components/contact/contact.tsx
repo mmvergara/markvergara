@@ -14,7 +14,7 @@ const ContactPage = () => {
     }
     setStatus("Submitting");
     try {
-      const res = await fetch("https://mmvergara-dev-website-api.vercel.app/api/dev-website/contact", {
+      const res = await fetch("https://markvergara-api.vercel.app/api/dev-website/contact", {
         method: "put",
         body: JSON.stringify({ fullName, email, message }),
         headers: {
