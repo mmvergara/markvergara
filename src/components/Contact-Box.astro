@@ -30,13 +30,13 @@ const ContactLinks = [
 ---
 
 <section
-  class='text-white text-sm bg-skillCardBg p-4 gap-1 flex flex-col w-[350px] rounded-lg border-b-4 border-cardBg mx-auto mt-8'
+  class='text-white text-sm bg-skillCardBg p-4 flex flex-col w-[320px] rounded-lg border-b-4 border-cardBg mx-auto mt-8'
 >
   {
     ContactLinks.map((l) => {
       return (
         <p>
-          <Icon name={l.iconName} class='w-[30px] height-[30px] mb-1 inline' /> :{" "}
+          <Icon name={l.iconName} class='w-[25px] height-[25px] mb-1 inline' /> :{" "}
           <a href={l.href} aria-label={l.label} class='text-md font-normal tracking-wide'>
             {l.content}
           </a>

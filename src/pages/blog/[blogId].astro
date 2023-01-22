@@ -19,6 +19,14 @@ export async function getStaticPaths() {
 
 const { blogId } = Astro.params;
 const blogRequest = (await fetch(`https://dev.to/api/articles/${blogId}`)) as any;
+
+// 2 Sec Delay
+await new Promise((res, rej) => {
+  setTimeout(() => {
+    res("");
+  }, 2000);
+});
+
 const data = await blogRequest.json();
 ---
 

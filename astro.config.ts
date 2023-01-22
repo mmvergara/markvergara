@@ -5,7 +5,6 @@ import sitemap from "@astrojs/sitemap";
 import compress from "astro-compress";
 import image from "@astrojs/image";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://markvergara.vercel.app",
   base: "/",
@@ -19,6 +18,7 @@ export default defineConfig({
       js: true,
       img: true,
       svg: true,
+      json: true,
     }),
     image(),
   ],
