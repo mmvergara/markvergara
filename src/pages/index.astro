@@ -1,19 +1,17 @@
 ---
-import AboutMe from "../components/Homepage/AboutMe.astro";
-import FeaturedProjects from "../components/Homepage/FeaturedProjects.astro";
-import Introduction from "../components/Homepage/Introduction.astro";
-import Crown from "../components/Homepage/Crown.astro";
+import FeaturedProjects from "../components/homepage/FeaturedProjects.astro";
+import Introduction from "../components/homepage/Introduction.astro";
+import AboutMe from "../components/homepage/About-Me.astro";
+import Skills from "../components/homepage/Skills.astro";
+import Crown from "../components/homepage/Crown.astro";
 import Layout from "../layout/Layout.astro";
-import Skills from "../components/Homepage/Skills.astro";
 ---
 
 <Layout
   title='Mark Vergara | Web Developer'
   contentDescription='Introduction about Mark Matthew Vergara a Web Developer'
 >
-  <div
-    class='text-white text-1xl md:text-2xl max-w-[1200px] p-4 mx-auto gap-[200px] flex flex-col items-center justify-between'
-  >
+  <div class='md:pt-[130px] text-white md:text-2xl max-w-[1200px] p-4 mx-auto gap-[200px] flex flex-col items-center justify-between'>
     <Introduction />
     <AboutMe />
     <Crown />

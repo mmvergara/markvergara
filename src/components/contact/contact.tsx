@@ -21,7 +21,7 @@ const ContactPage = () => {
           "Content-Type": "application/json",
         },
       });
-      console.log({res})
+      console.log({ res });
       resetForm();
       setStatus("Message sent successfully!");
     } catch (error) {
@@ -42,7 +42,6 @@ const ContactPage = () => {
 
       <section className='text-white text-sm font-medium bg-skillCardBg p-4 flex flex-col w-[350px] rounded-lg border-b-4 border-cardBg mx-auto mt-8'>
         <p>
-          Email
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='inline mx-1'
@@ -63,7 +62,6 @@ const ContactPage = () => {
           </a>
         </p>
         <p>
-          Github
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='inline mx-1'
@@ -83,7 +81,6 @@ const ContactPage = () => {
           </a>
         </p>
         <p>
-          LinkedIn
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='inline mx-1'

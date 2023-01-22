@@ -1,8 +1,8 @@
 ---
-import type { BlogListTypes } from "../../components/Blog/BlogTypes";
 import ScrollView from "../../components/Scroll-View.astro";
 import Layout from "../../layout/Layout.astro";
 import fetch from "node-fetch";
+import type { BlogListTypes } from "../../components/blog/BlogTypes";
 
 const response = (await fetch("https://dev.to/api/articles?username=mmvergara")) as any;
 const data = (await response.json()) as BlogListTypes[];
@@ -11,10 +11,9 @@ const data = (await response.json()) as BlogListTypes[];
 <Layout
   title='Blog | Mark Vergara'
   contentDescription='I Create blogs to share... pretty much everything i want to share like my works, experiences, handy tips and sometimes some educational content.'
-  customMainTagClasses='md:pt-2'
 >
   <div
-    class='text-white text-1xl md:text-2xl max-w-[1200px] p-4 mx-auto flex flex-col items-center justify-between gap-0'
+    class='md:pt-10 text-white text-1xl md:text-2xl max-w-[1200px] p-4 mx-auto flex flex-col items-center justify-between gap-0'
   >
     <ScrollView>
       <h1 class='w-[100%] text-red-500 text-4xl md:text-7xl font-semibold font-Poppins px-4 py-2'>Blog</h1>

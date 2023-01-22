@@ -1,8 +1,12 @@
 ---
-import type { Skill } from "../../../types/SkillCard";
-import ScrollView from "../../Scroll-View.astro";
+type Props = {
+  skillName:string
+  iconName:string
+  classes?:string
+}
+
 import { Icon } from "astro-icon";
-type Props = Skill;
+import ScrollView from "../../Scroll-View.astro";
 const { skillName, iconName, classes } = Astro.props as Props;
 ---
 

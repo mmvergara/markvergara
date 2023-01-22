@@ -4,29 +4,42 @@ import Header from "./Header.astro";
 interface Props {
   title?: string;
   contentDescription?: string;
-  customMainTagClasses?: string;
 }
-
-const { title, contentDescription, customMainTagClasses } = Astro.props as Props;
+const { title, contentDescription } = Astro.props as Props;
 const canonicalURL = new URL(Astro.url).href;
 ---
 
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <link rel='sitemap' href='/sitemap-index.xml' />
     <link rel='canonical' href={canonicalURL} />
     <meta name='description' content={contentDescription} />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
-
+    <meta name='color-scheme' content='dark' />
+    <meta name='title' content={title} />
+    <meta property='og:type' content='website' />
+    <meta property='og:url' content={canonicalURL} />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content={contentDescription} />
+    <meta property='og:site_name' content='Mark Vergara' />
+    <meta property='og:locale' content='en_US' />
+    <meta property='twitter:card' content='summary' />
+    <meta property='twitter:url' content={canonicalURL} />
+    <meta name='twitter:site' content='@mmvergara' />
+    <meta name='twitter:creator' content='@mmvergara' />
+    <meta property='twitter:title' content={title} />
+    <meta property='twitter:description' content={contentDescription} />
+    <meta name='generator' content={Astro.generator} />
+    <meta name='robots' content='follow, index' />
+    <meta name='author' content='Lance Ross' />
     <title>{title}</title>
   </head>
   <body>
     <Header />
-    <main class={`md:pt-[130px] ${customMainTagClasses}`}>
+    <main>
       <slot />
     </main>
     <Footer />
@@ -34,7 +47,7 @@ const canonicalURL = new URL(Astro.url).href;
 </html>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap");
   html {
     height: 100%;
     font-family: "Inter", sans-serif;
@@ -42,15 +55,7 @@ const canonicalURL = new URL(Astro.url).href;
   }
   body {
     background-image: linear-gradient(to top, hsl(214, 21%, 15%), #0d1117);
-    /* background-color: #151b25; */
     background-attachment: fixed;
     margin: 0;
   }
-
-  /* img {
-    -webkit-backface-visibility: hidden;
-    -ms-transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  } */
 </style>

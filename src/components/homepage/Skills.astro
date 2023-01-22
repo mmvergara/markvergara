@@ -1,7 +1,11 @@
 ---
 import ScrollView from "../Scroll-View.astro";
 import SkillCard from "./Sub-Components/SkillCard.astro";
-import type { Skill } from "../../types/SkillCard";
+type Skill = {
+  skillName:string
+  iconName:string
+  classes?:string
+}
 
 const Skills: Skill[] = [
   { skillName: "HTML5", iconName: "vscode-icons:file-type-html" },
