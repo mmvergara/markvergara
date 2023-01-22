@@ -1,12 +1,12 @@
 ---
 import { Icon } from "astro-icon";
+const { documentationLink, githubUrl, liveUrl, title } = Astro.props as Props;
 export interface Props {
   title: string;
   githubUrl?: string;
   liveUrl?: string;
   documentationLink?: string;
 }
-const { documentationLink, githubUrl, liveUrl, title } = Astro.props as Props
 ---
 
 <>
