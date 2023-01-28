@@ -63,11 +63,11 @@ export const MMVProjects: ProjectDetails[] = [
   {
     title: "Ashera",
     description: "Lightweight App that can manage your tasks and notes, yep That's it!",
-    githubUrl: "https://github.com/mmvergara/mmv-boardz",
-    liveUrl: "https://mmv-boardz.vercel.app/",
+    githubUrl: "https://github.com/mmvergara/mmv-ashera",
+    liveUrl: "https://mmv-ashera.vercel.app/",
     documentationLink: "https://mmv-docs.vercel.app/docs/category/boardz",
     projectType: "featured",
-    deploymentDate: "October 30, 2022",
+    deploymentDate: "November 6, 2022",
     technologies: ["react", "chakra-ui", "firebase"],
   },
   {
