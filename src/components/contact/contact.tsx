@@ -66,9 +66,12 @@ const ContactPage = () => {
         name='messageContent'
         placeholder='Send me a message :)'
       ></textarea>
-      <button type='submit' className='p-2 bg-purple-800 mt-4 rounded-md hover:bg-purple-600'>
+      <button disabled type='submit' className='p-2 bg-purple-800 mt-4 rounded-md hover:bg-purple-600'>
         Send Message
       </button>
+      <span className='text-center mt-2 opacity-60'>
+        Message Form is currently disabled, please contact me using email or any other of links instead
+      </span>
       {status && <p className='mt-4'>{status}</p>}
     </form>
   );
