@@ -2,20 +2,26 @@
 import SkillCard from "./Sub-Components/SkillCard.astro";
 import ScrollView from "../Scroll-View.astro";
 type Skill = {
-  skillName:string
-  iconName:string
-  classes?:string
-}
+  skillName: string;
+  iconName: string;
+  classes?: string;
+};
 
 const Skills: Skill[] = [
   { skillName: "HTML5", iconName: "vscode-icons:file-type-html" },
   { skillName: "CSS3", iconName: "vscode-icons:file-type-css" },
-  { skillName: "Javascript", iconName: "simple-icons:javascript", classes: "text-javascript" },
+  {
+    skillName: "Javascript",
+    iconName: "simple-icons:javascript",
+    classes: "text-javascript",
+  },
   { skillName: "Typescript", iconName: "vscode-icons:file-type-typescript" },
   { skillName: "React", iconName: "vscode-icons:file-type-reactjs" },
   { skillName: "Redux", iconName: "logos:redux" },
   { skillName: "NextJs", iconName: "akar-icons:nextjs-fill" },
   { skillName: "Astro", iconName: "simple-icons:astro" },
+  { skillName: "React Testing Library", iconName: "rtl" },
+  { skillName: "Electron", iconName: "electron" },
   { skillName: "Cypress", iconName: "cypress" },
   { skillName: "NodeJs", iconName: "logos:nodejs-icon" },
   { skillName: "MongoDB", iconName: "vscode-icons:file-type-mongo" },
@@ -25,7 +31,11 @@ const Skills: Skill[] = [
   { skillName: "PostgreSql", iconName: "logos:postgresql" },
   { skillName: "TailwindCSS", iconName: "logos:tailwindcss-icon" },
   { skillName: "Framer Motion", iconName: "gg:framer" },
-  { skillName: "Chakra UI", iconName: "simple-icons:chakraui", classes: "text-chakraUI" },
+  {
+    skillName: "Chakra UI",
+    iconName: "simple-icons:chakraui",
+    classes: "text-chakraUI",
+  },
   { skillName: "Material UI", iconName: "logos:material-ui" },
   { skillName: "Mantine UI", iconName: "mantine" },
   { skillName: "Docusaurus", iconName: "logos:docusaurus" },
@@ -38,16 +48,26 @@ const Skills: Skill[] = [
 ---
 
 <section
-  id='Skills'
-  class='text-white w-[100%] flex flex-col justify-between gap-8 items-center md:pt-[190px] lg:pt-[100px]'
+  id="Skills"
+  class="text-white w-[100%] flex flex-col justify-between gap-8 items-center md:pt-[190px] lg:pt-[100px]"
 >
-  <ScrollView customClasses='text-center w-[100%] '>
-    <h2 class='text-4xl sm:text-6xl text-emerald-500 mb-4 font-Poppins font-semibold'>Skills and Tools</h2>
+  <ScrollView customClasses="text-center w-[100%] ">
+    <h2
+      class="text-4xl sm:text-6xl text-emerald-500 mb-4 font-Poppins font-semibold"
+    >
+      Skills and Tools
+    </h2>
   </ScrollView>
-  <div class='flex justify-center flex-wrap gap-x-5 gap-y-12'>
+  <div class="flex justify-center flex-wrap gap-x-5 gap-y-12">
     {
       Skills.map((s) => {
-        return <SkillCard skillName={s.skillName} iconName={s.iconName} classes={s?.classes} />;
+        return (
+          <SkillCard
+            skillName={s.skillName}
+            iconName={s.iconName}
+            classes={s?.classes}
+          />
+        );
       })
     }
   </div>
