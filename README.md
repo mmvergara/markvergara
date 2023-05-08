@@ -5,3 +5,4 @@
 
 - Do Footer
 - Pages Title
+- add custome head image

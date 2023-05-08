@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { getAllProjects } from "@/services/Projects";
 import ProjectCard from "@/components/Projects/ProjectCard";
 
+export const getStaticProps = async () => {
+  return {
+    props: { title: "Projects" },
+  };
+};
+
 const ProjectPage = () => {
   const [projects, setProjects] = useState<ProjectDetails[]>([]);
   const fetchAllProject = async () => {

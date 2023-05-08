@@ -4,6 +4,12 @@ import SyntaxHighlighter from "@/components/SyntaxHighlighter";
 import Divider from "@/components/Divider";
 import Link from "next/link";
 
+export const getStaticProps = async () => {
+  return {
+    props: { title: "Home" },
+  };
+};
+
 const HomePage = () => {
   const [dots, setDots] = useState(1);
   const [finishInitializing, setFinishInitializing] = useState(false);

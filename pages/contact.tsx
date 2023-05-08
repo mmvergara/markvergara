@@ -4,6 +4,12 @@ import GithubIcon from "@/components/icons/GithubIcon";
 import DevToIcon from "@/components/icons/DevToIcon";
 import MailIcon from "@/components/icons/MailIcon";
 
+export const getStaticProps = async () => {
+  return {
+    props: { title: "Contact" },
+  };
+};
+
 const ContactPage = () => {
   const Contact: ContactData[] = [
     {

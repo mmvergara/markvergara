@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const getStaticProps = async () => {
+  return {
+    props: { title: "Resume" },
+  };
+};
+
 const GithubPreviewPage = () => {
   return (
     <div className="p-4 pl-12 font-JetBrainsMono flex flex-col gap-8">
