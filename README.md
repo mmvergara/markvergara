@@ -1,4 +1,7 @@
-# Personal Website
+# Personal Developer Website
 
-- Live - https://markvergara.vercel.app/
-- Special Thanks to https://lanceross.me/ for introducing me to the world of astro 👑
+
+- add anchor tags contact page
+
+- Do Footer
+- Pages Title

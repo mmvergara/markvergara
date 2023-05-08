@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161b22;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #21262d
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsla(187, 47%, 25%)
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(187, 47%, 25%);
+}
+
+.oneDarkPurple {
+  color: #ca78d6;
+}
+
+.oneDarkOrange {
+  color: #d19a66;
+}
+
+.oneDarkYellow {
+  color: #e5c07b;
+}
+
+.oneDarkGreen {
+  color: #98c379;
+}
+
+.oneDarkBlue {
+  color: #61afef;
+}
+
+.oneDarkRed {
+  color: #e06c75;
+}
+
+.oneDarkCyan {
+  color: #56b6c2;
+}
+
+.oneDarkGray {
+  color: #9fa8b7;
+}
