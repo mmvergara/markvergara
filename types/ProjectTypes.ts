@@ -9,8 +9,8 @@ export interface ProjectDetails {
   title: string;
   description: string;
   imageUrl: string;
-  liveUrl?: string;
-  documentationLink?: string;
+  liveUrl: string | null;
+  documentationLink: string | null;
   githubUrl: string;
   tags: string[];
   deploymentDate: Date;

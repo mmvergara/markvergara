@@ -17,7 +17,6 @@ const getProjectDetails = async (Project: ProjectQueryParams) => {
   const url = `https://api.github.com/repos/mmvergara/${Project.repoName}`;
   const response = await fetch(url);
   const responseData = await response.json();
-  console.log(responseData)
   const repositoryData = responseData as Repository;
   const projectDetails: ProjectDetails = {
     id: repositoryData.id,
@@ -25,10 +24,10 @@ const getProjectDetails = async (Project: ProjectQueryParams) => {
     description: repositoryData.description || "",
     githubUrl: repositoryData.html_url,
     imageUrl: `/assets/images/${repositoryData.name}.png`,
-    liveUrl: repositoryData.homepage || undefined,
+    liveUrl: repositoryData.homepage || null,
     documentationLink: Project.hasDocumentation
       ? `https://mmv-docs.vercel.app/docs/${repositoryData.name}`
-      : undefined,
+      : null,
     deploymentDate: repositoryData.created_at,
     tags: repositoryData.topics,
   };
