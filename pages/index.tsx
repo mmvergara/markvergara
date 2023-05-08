@@ -205,7 +205,7 @@ const HomePage = () => {
         "gr =",
         'g "px-6 text-oneDarkCyan"',
         "gr >",
-        "gr Initializing",
+        "gr Initializing Please Wait",
         "b {",
         'g "."',
         "gr .",
@@ -238,7 +238,7 @@ const HomePage = () => {
       <br />
 
       <Divider className="border-t" />
-      <p className="px-6 text-xl mt-1 text-oneDarkCyan underline underline-offset-8">
+      <p className="px-6 text-xl mt-1 text-oneDarkCyan underline underline-offset-8 animate-pulse">
         Initializing Please Wait{".".repeat(dots)}
       </p>
       <br />

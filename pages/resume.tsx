@@ -9,7 +9,7 @@ export const getStaticProps = async () => {
 
 const GithubPreviewPage = () => {
   return (
-    <div className="p-4 pl-12 font-JetBrainsMono flex flex-col gap-8">
+    <div className="pt-8 justify-center items-center font-JetBrainsMono flex flex-col gap-8">
       <h1 className="text-4xl">CV / Resume</h1>
       <Link
         target="_blank"
@@ -21,7 +21,7 @@ const GithubPreviewPage = () => {
       <Image
         src="/assets/images/resume.png"
         alt="resume"
-        className="pb-12"
+        className="pb-[200px]"
         width={595}
         height={842}
       />

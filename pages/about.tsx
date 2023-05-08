@@ -23,6 +23,10 @@ const ProfilePage = () => {
         2022 but the majority of my knowledge is self-taught and I enjoy documenting my progress. I'm seeking low-paying or
         freelance jobs to prepare for graduation in 2025.`}
       </p>
+      <br />
+      <p>
+        Current Work : <span className="animate-pulse text-oneDarkGreen">None</span>
+      </p>
     </div>
   );
 };
