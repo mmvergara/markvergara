@@ -17,6 +17,7 @@ const getProjectDetails = async (Project: ProjectQueryParams) => {
   const url = `https://api.github.com/repos/mmvergara/${Project.repoName}`;
   const response = await fetch(url);
   const responseData = await response.json();
+  console.log(responseData)
   const repositoryData = responseData as Repository;
   const projectDetails: ProjectDetails = {
     id: repositoryData.id,

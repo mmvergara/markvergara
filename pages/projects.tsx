@@ -3,14 +3,9 @@ import { useEffect, useState } from "react";
 import { getAllProjects } from "@/services/Projects";
 import ProjectCard from "@/components/Projects/ProjectCard";
 
-export const getStaticProps = async () => {
-  return {
-    props: { title: "Projects" },
-  };
-};
+type Data = { projects: ProjectDetails[] };
 
-const ProjectPage = () => {
-  const [projects, setProjects] = useState<ProjectDetails[]>([]);
+export const getStaticProps = async () => {
   const fetchAllProject = async () => {
     const RepositoryProjects: ProjectQueryParams[] = [
       {
@@ -45,14 +40,15 @@ const ProjectPage = () => {
         hasDocumentation: false,
       },
     ];
-    const projects = await getAllProjects(RepositoryProjects);
-    setProjects(projects);
+    return await getAllProjects(RepositoryProjects);
   };
+  const projects = await fetchAllProject();
+  return {
+    props: { title: "Projects", projects },
+  };
+};
 
-  useEffect(() => {
-    fetchAllProject();
-  }, []);
-
+const ProjectPage = ({ projects }: Data) => {
   return (
     <section className="p-12 flex justify-center items-center flex-wrap gap-14 font-JetBrainsMono">
       {projects.map((project) => {
