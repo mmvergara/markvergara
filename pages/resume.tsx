@@ -9,7 +9,7 @@ export const getStaticProps = async () => {
 
 const GithubPreviewPage = () => {
   return (
-    <div className="pt-8 justify-center items-center font-JetBrainsMono flex flex-col gap-8">
+    <div className="pt-8 px-1 justify-center items-center font-JetBrainsMono flex flex-col gap-8">
       <h1 className="text-4xl">CV / Resume</h1>
       <Link
         target="_blank"

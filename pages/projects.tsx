@@ -15,6 +15,11 @@ export const getStaticProps = async () => {
       },
       { repoName: "psau-rant", name: "PSAU Rant Web", hasDocumentation: false },
       {
+        repoName: "psau-rant-flutter",
+        name: "PSAU Rant Mobile",
+        hasDocumentation: false,
+      },
+      {
         repoName: "mmv-acrie-shop",
         name: "Acrie Shop",
         hasDocumentation: false,
@@ -50,7 +55,7 @@ export const getStaticProps = async () => {
 
 const ProjectPage = ({ projects }: Data) => {
   return (
-    <section className="p-12 flex justify-center items-center flex-wrap gap-14 font-JetBrainsMono">
+    <section className="p-4 sm:p-12 flex justify-center items-center flex-wrap gap-14 font-JetBrainsMono">
       {projects.map((project) => {
         return <ProjectCard key={project.id} ProjectDetails={project} />;
       })}
