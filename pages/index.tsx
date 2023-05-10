@@ -29,7 +29,7 @@ const HomePage = () => {
   if (finishInitializing)
     return (
       <div className="flex items-center flex-col gap-4 pt-[5vh] font-JetBrainsMono">
-        <h1 className="text-[48px] font-bold text-center">
+        <h1 className="text-[48px] font-bold text-center ">
           Mark Matthew Vergara
         </h1>
         <h2 className="text-purple-300 text-center animate-pulse">
@@ -38,25 +38,25 @@ const HomePage = () => {
         <div className="flex flex-col sm:flex-row gap-6 pt-10">
           <Link
             href="/about"
-            className="border-[3px] border-nightOwlBlue hover:bg-nightOwlBlue py-2 px-8 "
+            className="border-[3px] border-nightOwlBlue hover:bg-nightOwlBlue py-2 px-8 text-center"
           >
             About Me
           </Link>
           <Link
             href="/resume"
-            className="border-[3px] border-oneDarkPurple hover:bg-oneDarkPurple py-2 px-8 "
+            className="border-[3px] border-oneDarkPurple hover:bg-oneDarkPurple py-2 px-8 text-center"
           >
             Resume
           </Link>
           <Link
             href="/projects"
-            className="border-[3px] border-nightOwlBlue hover:bg-nightOwlBlue py-2 px-8"
+            className="border-[3px] border-nightOwlBlue hover:bg-nightOwlBlue py-2 px-8 text-center"
           >
             My Projects
           </Link>
           <Link
             href="/contact"
-            className="border-[3px] border-nightOwlBlue hover:bg-nightOwlBlue py-2 px-8"
+            className="border-[3px] border-nightOwlBlue hover:bg-nightOwlBlue py-2 px-8 text-center"
           >
             Contact Me
           </Link>
@@ -65,7 +65,7 @@ const HomePage = () => {
     );
 
   return (
-    <div className="font-JetBrainsMono pt-2 text-sm">
+    <div className="font-JetBrainsMono pt-2 text-sm overflow-x-scroll whitespace-nowrap">
       <span className="px-6">1</span>
       {SyntaxHighlighter([
         "p import ",
@@ -238,7 +238,7 @@ const HomePage = () => {
       <br />
 
       <Divider className="border-t" />
-      <p className="px-6 text-xl mt-1 text-oneDarkCyan underline underline-offset-8 animate-pulse">
+      <p className="px-6 text-sm sm:text-xl mt-1 text-oneDarkCyan underline underline-offset-8 animate-pulse">
         Initializing Please Wait{".".repeat(dots)}
       </p>
       <br />

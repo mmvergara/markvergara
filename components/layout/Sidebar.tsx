@@ -67,7 +67,7 @@ const Sidebar = () => {
           ${
             isActive
               ? "border-nightOwlBlue bg-nightOwlBlack"
-              : "border-nightOwlBlack"
+              : "border-nightOwlBlack200"
           }
         `}
       >
@@ -85,8 +85,8 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="fixed">
-      <aside className="flex flex-col items-center justify-between bg-nightOwlBlack200 h-[100vh]">
+    <div className="fixed h-full">
+      <aside className="flex flex-col items-center justify-between bg-nightOwlBlack200 h-full">
         <div className="pt-[30px]">
           {sidebarTopItems.map((item) => renderSidebarItem(item))}
         </div>
