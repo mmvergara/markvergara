@@ -18,7 +18,7 @@ const HomePage = () => {
     setDots(2);
     await wait(1);
     setDots(3);
-    await wait(1);
+    // YEP I LIED !!! 
     setFinishInitializing(true);
   };
 
@@ -35,29 +35,20 @@ const HomePage = () => {
         <h2 className="text-purple-300 text-center animate-pulse">
           A Dev, yep just a dev.
         </h2>
-        <div className="flex flex-col sm:flex-row gap-6 pt-10">
-          <Link
-            href="/about"
-            className="border-[3px] border-nightOwlBlue hover:bg-nightOwlBlue py-2 px-8 text-center"
-          >
+        <div className="flex flex-col md:flex-row gap-6 pt-10">
+          <Link href="/about" className="btn-1">
             About Me
           </Link>
           <Link
             href="/resume"
-            className="border-[3px] border-oneDarkPurple hover:bg-oneDarkPurple py-2 px-8 text-center"
+            className=" btn-1 border-oneDarkPurple hover:bg-oneDarkPurple"
           >
             Resume
           </Link>
-          <Link
-            href="/projects"
-            className="border-[3px] border-nightOwlBlue hover:bg-nightOwlBlue py-2 px-8 text-center"
-          >
+          <Link href="/projects" className="btn-1">
             My Projects
           </Link>
-          <Link
-            href="/contact"
-            className="border-[3px] border-nightOwlBlue hover:bg-nightOwlBlue py-2 px-8 text-center"
-          >
+          <Link href="/contact" className="btn-1">
             Contact Me
           </Link>
         </div>

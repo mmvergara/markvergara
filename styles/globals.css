@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn-1 {
+    @apply flex justify-center items-center border-[3px] border-nightOwlBlue hover:bg-nightOwlBlue py-2 px-8 text-center rounded-tl-lg rounded-br-lg;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,11 +25,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #21262d
+  background: #21262d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsla(187, 47%, 25%)
+  background: hsla(187, 47%, 25%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
