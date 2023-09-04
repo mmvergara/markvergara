@@ -30,7 +30,7 @@ export const getStaticProps = async () => {
         hasDocumentation: true,
       },
       {
-        repoName: "mmv-nextjs-discord-bot-template",
+        repoName: "nextjs-discord-bot-boilerplate",
         name: "NextJS Discord Bot",
         hasDocumentation: true,
       },
