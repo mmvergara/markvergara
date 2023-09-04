@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import GithubIcon from "../icons/GithubIcon";
 import Link from "next/link";
 import MailIcon from "../icons/MailIcon";
 import { svgProps } from "@/types/GeneralTypes";
