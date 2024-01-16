@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import ErrorIcon from "../icons/ErrorIcon";
 import SourceControlIcon from "../icons/SourceControlIcon";

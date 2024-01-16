@@ -4,12 +4,57 @@ import {
   Repository,
 } from "@/types/ProjectTypes";
 
-export const getAllProjects = async (Projects: ProjectQueryParams[]) => {
+export const getAllProjects = async () => {
+  const Projects: ProjectQueryParams[] = [
+    {
+      repoName: "mmv-dex",
+      name: "Dex",
+      hasDocumentation: true,
+    },
+    { repoName: "psau-rant", name: "PSAU Rant Web", hasDocumentation: false },
+    {
+      repoName: "psau-rant-flutter",
+      name: "PSAU Rant Mobile",
+      hasDocumentation: false,
+    },
+    {
+      repoName: "mmv-acrie-shop",
+      name: "Acrie Shop",
+      hasDocumentation: false,
+    },
+    {
+      repoName: "mmv-ashera",
+      name: "Ashera",
+      hasDocumentation: true,
+    },
+    {
+      repoName: "nextjs-discord-bot-boilerplate",
+      name: "NextJS Discord Bot",
+      hasDocumentation: true,
+    },
+    {
+      repoName: "mmv-algorithm-visualizer",
+      name: "Algorithm Visualizer",
+      hasDocumentation: false,
+    },
+    {
+      repoName: "mmv-docs",
+      name: "MMV Docs",
+      hasDocumentation: false,
+    },
+  ];
+
   const projectDetails = await Promise.all(
     Projects.map(async (Project) => {
       return await getProjectDetails(Project);
     })
   );
+
+  
+  console.log("====================================");
+  console.log(projectDetails);
+  console.log("====================================");
+
   return projectDetails;
 };
 

@@ -13,7 +13,7 @@ export interface ProjectDetails {
   documentationLink: string | null;
   githubUrl: string;
   tags: string[];
-  deploymentDate: Date;
+  deploymentDate: string | Date;
 }
 
 export type Repository = {

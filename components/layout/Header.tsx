@@ -1,3 +1,5 @@
+"use client"
+
 import VSCodeIcon from "../icons/VSCodeIcon";
 
 const Header = () => {

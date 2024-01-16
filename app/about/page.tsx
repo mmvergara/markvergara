@@ -1,11 +1,5 @@
 import Image from "next/image";
 
-export const getStaticProps = async () => {
-  return {
-    props: { title: "About" },
-  };
-};
-
 const ProfilePage = () => {
   return (
     <div className="p-12 font-JetBrainsMono flex justify-center items-center flex-col">

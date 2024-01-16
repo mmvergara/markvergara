@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,7 +21,7 @@ module.exports = {
         oneDarkRed: "#e06c75",
         oneDarkCyan: "#56b6c2",
         oneDarkGrey: " #9fa8b7",
-        
+
         nightOwlBlue: "#51c3bc",
         nightOwlBlack: "#161b22",
         nightOwlBlack200: "#1a2029",
@@ -32,4 +33,6 @@ module.exports = {
     },
     plugins: [],
   },
+  plugins: [],
 };
+export default config;

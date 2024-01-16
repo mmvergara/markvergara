@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+"use client";
 import Link from "next/link";
 import MailIcon from "../icons/MailIcon";
 import { svgProps } from "@/types/GeneralTypes";
@@ -7,6 +7,7 @@ import AccountIcon from "../icons/AccountIcon";
 import FilesIcon from "../icons/FilesIcon";
 import CodeIcon from "../icons/CodeIcon";
 import ResumeIcon from "../icons/ResumeIcon";
+import { usePathname, useRouter } from "next/navigation";
 
 type SidebarItem = {
   name: string;
@@ -15,7 +16,7 @@ type SidebarItem = {
 };
 
 const Sidebar = () => {
-  const router = useRouter();
+  const pathName = usePathname();
   const sidebarTopItems = [
     {
       name: "Home",
@@ -54,7 +55,7 @@ const Sidebar = () => {
 
   const renderSidebarItem = (items: SidebarItem) => {
     const { href, Icon, name } = items;
-    const isActive = router.pathname === href;
+    const isActive = pathName === href;
     return (
       <Link
         href={href}
@@ -73,11 +74,7 @@ const Sidebar = () => {
         <Icon
           height="30px"
           width="30px"
-          fill={
-            router.pathname === href
-              ? "rgb(225, 228, 232)"
-              : "rgb(106, 115, 125)"
-          }
+          fill={pathName === href ? "rgb(225, 228, 232)" : "rgb(106, 115, 125)"}
         />
       </Link>
     );
