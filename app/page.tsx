@@ -1,14 +1,8 @@
+"use client";
 import { useEffect, useState } from "react";
-import { wait } from "@/components/utilities/Helpers";
 import SyntaxHighlighter from "@/components/SyntaxHighlighter";
-import Divider from "@/components/Divider";
 import Link from "next/link";
-
-export const getStaticProps = async () => {
-  return {
-    props: { title: "Home" },
-  };
-};
+import { wait } from "@/utils/helpers";
 
 const HomePage = () => {
   const [dots, setDots] = useState(1);
@@ -18,7 +12,7 @@ const HomePage = () => {
     setDots(2);
     await wait(1);
     setDots(3);
-    // YEP I LIED !!! 
+    // YEP I LIED !!!
     setFinishInitializing(true);
   };
 
@@ -67,7 +61,6 @@ const HomePage = () => {
         "y ",
       ])}
       <br />
-
       <span className="px-6">2</span>
       {SyntaxHighlighter([
         "p import ",
@@ -134,38 +127,29 @@ const HomePage = () => {
         "p {",
       ])}
       <br />
-
       <span className="px-6 pr-16">8</span>
       {SyntaxHighlighter(["p await ", "b wait(", "o 1", "b )"])}
       <br />
-
       <span className="px-6 pr-16">9</span>
       {SyntaxHighlighter(["b setDots", "p (", "o 2", "p )"])}
       <br />
-
       <span className="px-6 pr-14">10</span>
       {SyntaxHighlighter(["p await ", "b wait(", "o 1", "b )"])}
       <br />
-
       <span className="px-6 pr-14">11</span>
       {SyntaxHighlighter(["b setDots", "p (", "o 3", "p )"])}
       <br />
-
       <span className="px-6 pr-14">12</span>
       {SyntaxHighlighter(["p await ", "b wait(", "o 1", "b )"])}
       <br />
-
       <span className="px-6 pr-14">13</span>
       {SyntaxHighlighter(["b setFinishInitializing", "p (", "o true", "p )"])}
       <br />
-
       <span className="px-6 pr-10">14</span>
       {SyntaxHighlighter(["p }"])}
       <br />
-
       <span className="px-6 pr-10">15</span>
       <br />
-
       <span className="px-6 pr-10">16</span>
       {SyntaxHighlighter(["b useEffect", "p (", "b () ", "p => ", "b {"])}
       <br />
@@ -176,7 +160,6 @@ const HomePage = () => {
       {SyntaxHighlighter(["b }", "p , ", "b []", "p )"])}
       <br />
       <span className="px-6 pr-10">19</span>
-
       <br />
       <span className="px-6 pr-10">20</span>
       {SyntaxHighlighter([
@@ -210,25 +193,19 @@ const HomePage = () => {
         "gr >",
       ])}
       <br />
-
       <span className="px-6 pr-10">22</span>
       <br />
-
       <span className="px-6 pr-10">23</span>
       {SyntaxHighlighter(["p return ", "gr <", "y AboutMe", "gr />"])}
       <br />
-
       <span className="px-6 pr-10">24</span>
       <br />
-
       <span className="px-6 pr-4">25</span>
       {SyntaxHighlighter(["y }"])}
       <br />
-
       <span className="px-6 pr-4">26</span>
       <br />
-
-      <Divider className="border-t" />
+      <div className="border-t-2 border-gray-600" />
       <p className="px-6 text-sm sm:text-xl mt-1 text-oneDarkCyan underline underline-offset-8 animate-pulse">
         Initializing Please Wait{".".repeat(dots)}
       </p>

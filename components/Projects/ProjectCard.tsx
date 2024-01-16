@@ -1,14 +1,16 @@
+"use client";
 import { ProjectDetails } from "@/types/ProjectTypes";
 import Image from "next/image";
 import GithubIcon from "../icons/GithubIcon";
 import LinkIcon from "../icons/LinkIcon";
 import { useState } from "react";
+import { classNameJoin } from "@/utils/helpers";
 
 interface ProjectCardProps {
   ProjectDetails: ProjectDetails;
 }
 const ProjectCard = ({ ProjectDetails }: ProjectCardProps) => {
-  const { tags, title, documentationLink, liveUrl, id } = ProjectDetails;
+  const { tags, title, documentationLink, liveUrl } = ProjectDetails;
   const { deploymentDate, description, githubUrl, imageUrl } = ProjectDetails;
 
   const slicedDescription = description.slice(0, 110);
@@ -27,10 +29,24 @@ const ProjectCard = ({ ProjectDetails }: ProjectCardProps) => {
     .split(" ");
   const date = `${month} ${year}`;
 
+  const [imgIsLoading, setImgIsLoading] = useState(true);
+
   return (
     <article className="flex flex-col justify-between bg-nightOwlBlack300 min-h-[510px] max-w-[308px] shadow-lg hover:shadow-lg hover:shadow-nightOwlBlack500 ">
       <div>
-        <Image src={imageUrl} alt={title} width={308} height={158} />
+        <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden  xl:aspect-w-7 xl:aspect-h-7">
+          <Image
+            alt={`${title || ""} preview image`}
+            src={imageUrl}
+            width={308}
+            height={158}
+            className={classNameJoin(
+              "duration-700 ease-in-out object-cover overflow-hidden",
+              imgIsLoading ? "blur-2xl grayscale" : "blur-0 grayscale-0"
+            )}
+            onLoad={() => setImgIsLoading(false)}
+          />
+        </div>
         <div className="p-4">
           <h4 className="text-[19px] font-bold text-[#51c3bc] mb-4">{title}</h4>
           <div className="flex gap-4 items-center mb-4">

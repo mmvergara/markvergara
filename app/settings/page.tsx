@@ -1,11 +1,5 @@
 import Link from "next/link";
 
-export const getStaticProps = async () => {
-  return {
-    props: { title: "Settings" },
-  };
-};
-
 const SettingsPage = () => {
   return (
     <div className="p-2 pt-4  sm:p-10 sm:pt-12">
