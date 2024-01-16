@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const CustomHead = () => {
+const HeadTag = () => {
   return (
     <Head>
       <title>Mark Vergara | Dev</title>
@@ -18,4 +18,4 @@ const CustomHead = () => {
   );
 };
 
-export default CustomHead;
+export default HeadTag;
