@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
 import Footer from "@/components/layout/Footer";
-import HeadTag from "@/components/layout/HeadTag";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +24,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <HeadTag />
       <body className={inter.className}>
         <Header />
         <Sidebar />
