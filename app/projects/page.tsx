@@ -40,7 +40,6 @@ const ProjectPage = () => {
 
   return (
     <>
-   
       <section className="px-4 pt-2 sm:px-12 flex justify-center items-center flex-wrap gap-14 font-JetBrainsMono">
         <ProjectTagsFilter
           activeTags={activeTags}
