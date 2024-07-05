@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import clsx from "clsx";
-import { BoxIcon, GiftIcon, PocketKnifeIcon } from "lucide-react";
+import { BoxIcon, GiftIcon, HomeIcon } from "lucide-react";
 
 const Navbar = () => {
   const { isBrutalism, toggleTheme } = useTheme();
@@ -16,7 +16,7 @@ const Navbar = () => {
         <button
           onClick={toggleTheme}
           className={clsx(
-            "p-[16px] px-6 hover:text-white",
+            "hidden p-[16px] px-6 hover:text-white sm:block",
             isBrutalism
               ? "border-l-2 border-r-2 border-black text-black hover:bg-black hover:text-white"
               : "text-gray-300",
@@ -28,18 +28,22 @@ const Navbar = () => {
           <Link
             to="/"
             className={clsx(
-              "p-4 px-6 hover:text-white",
+              "p-4 hover:text-white sm:px-6",
               isBrutalism
                 ? "border-l-2 border-r-2 border-black text-black hover:bg-black"
                 : "text-gray-300",
             )}
           >
-            Home
+            <span className="hidden sm:block">Home</span>
+            <span className="sm:hidden">
+              <HomeIcon size={18} className="mt-1" />
+            </span>
           </Link>
+
           <Link
-            to="/project"
+            to="/projects"
             className={clsx(
-              "p-4 px-6 hover:text-white",
+              "p-4 hover:text-white sm:px-6",
               isBrutalism
                 ? "border-black text-black hover:bg-black"
                 : "text-gray-300",
@@ -50,22 +54,22 @@ const Navbar = () => {
           <Link
             to="/contact"
             className={clsx(
-              "p-4 px-6 hover:text-white",
+              "p-4 hover:text-white sm:px-6",
               isBrutalism
                 ? "border-l-2 border-r-2 border-black text-black hover:bg-black"
                 : "text-gray-300",
             )}
           >
-            About
+            Contact
           </Link>
         </div>
         <button
           onClick={toggleTheme}
           className={clsx(
-            "ml-12 p-2",
+            "ml-12 mr-4 p-2",
             isBrutalism
               ? "brutal-btn border-l-2 border-r-2 border-black text-black"
-              : "text-gray-300",
+              : "animate-pulse text-gray-300",
           )}
         >
           {isBrutalism ? <BoxIcon size={18} /> : <GiftIcon size={18} />}
