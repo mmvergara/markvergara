@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .brutal-btn {
+    @apply justify-center rounded-md border-2 border-black bg-white hover:bg-gray-100 font-bold text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
