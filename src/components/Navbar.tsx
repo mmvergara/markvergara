@@ -9,29 +9,29 @@ const Navbar = () => {
     <div
       className={clsx(
         "w-full text-gray-300",
-        isBrutalism ? "border-b-2 border-black" : ""
+        isBrutalism ? "border-b-2 border-black" : "",
       )}
     >
-      <nav className="mx-auto max-w-[800px] flex items-center text-l font-medium justify-between">
+      <nav className="text-l mx-auto flex max-w-[800px] items-center justify-between font-medium">
         <button
           onClick={toggleTheme}
           className={clsx(
-            "hover:text-white p-[16px] px-6",
+            "p-[16px] px-6 hover:text-white",
             isBrutalism
-              ? "text-black border-l-2 border-black border-r-2 hover:bg-black hover:text-white"
-              : "text-gray-300"
+              ? "border-l-2 border-r-2 border-black text-black hover:bg-black hover:text-white"
+              : "text-gray-300",
           )}
         >
-          👑
+          Portfolio
         </button>
         <div className="flex">
           <Link
             to="/"
             className={clsx(
-              "hover:text-white p-4 px-6",
+              "p-4 px-6 hover:text-white",
               isBrutalism
-                ? "text-black border-l-2 border-black border-r-2  hover:bg-black"
-                : "text-gray-300"
+                ? "border-l-2 border-r-2 border-black text-black hover:bg-black"
+                : "text-gray-300",
             )}
           >
             Home
@@ -39,10 +39,10 @@ const Navbar = () => {
           <Link
             to="/project"
             className={clsx(
-              "hover:text-white p-4 px-6",
+              "p-4 px-6 hover:text-white",
               isBrutalism
-                ? " border-black text-black hover:bg-black"
-                : "text-gray-300"
+                ? "border-black text-black hover:bg-black"
+                : "text-gray-300",
             )}
           >
             Projects
@@ -50,10 +50,10 @@ const Navbar = () => {
           <Link
             to="/contact"
             className={clsx(
-              "hover:text-white p-4 px-6 ",
+              "p-4 px-6 hover:text-white",
               isBrutalism
-                ? "text-black border-l-2 border-black border-r-2 hover:bg-black"
-                : "text-gray-300"
+                ? "border-l-2 border-r-2 border-black text-black hover:bg-black"
+                : "text-gray-300",
             )}
           >
             About
@@ -62,10 +62,10 @@ const Navbar = () => {
         <button
           onClick={toggleTheme}
           className={clsx(
-            "hover:text-white p-[19px] px-6",
+            "ml-12 p-2",
             isBrutalism
-              ? "text-black border-l-2 border-black border-r-2 hover:bg-black hover:text-white"
-              : "text-gray-300"
+              ? "brutal-btn border-l-2 border-r-2 border-black text-black"
+              : "text-gray-300",
           )}
         >
           {isBrutalism ? <BoxIcon size={18} /> : <GiftIcon size={18} />}
