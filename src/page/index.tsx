@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { BookTextIcon, MailIcon } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
-import Hero from "./assets/hero.jpg";
+import Hero from "../assets/hero.jpg";
 const HomePage = () => {
   const { isBrutalism } = useTheme();
 

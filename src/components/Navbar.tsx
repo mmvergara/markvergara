@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import clsx from "clsx";
-import { BoxIcon, GiftIcon, HomeIcon } from "lucide-react";
+import {
+  BookUserIcon,
+  BoxIcon,
+  CircleUserIcon,
+  GiftIcon,
+  HomeIcon,
+  PhoneIcon,
+  TelescopeIcon,
+  UserIcon,
+} from "lucide-react";
 
 const Navbar = () => {
   const { isBrutalism, toggleTheme } = useTheme();
@@ -28,28 +37,29 @@ const Navbar = () => {
           <Link
             to="/"
             className={clsx(
-              "p-4 hover:text-white sm:px-6",
+              "p-4 hover:text-white sm:hidden sm:px-6",
               isBrutalism
-                ? "border-l-2 border-r-2 border-black text-black hover:bg-black"
+                ? "border-black text-black hover:bg-black sm:border-l-2"
                 : "text-gray-300",
             )}
           >
-            <span className="hidden sm:block">Home</span>
             <span className="sm:hidden">
               <HomeIcon size={18} className="mt-1" />
             </span>
           </Link>
-
           <Link
             to="/projects"
             className={clsx(
               "p-4 hover:text-white sm:px-6",
               isBrutalism
-                ? "border-black text-black hover:bg-black"
+                ? "border-l-2 border-black text-black hover:bg-black"
                 : "text-gray-300",
             )}
           >
-            Projects
+            <span className="hidden sm:block">Projects</span>
+            <span className="sm:hidden">
+              <TelescopeIcon size={18} className="mt-1" />
+            </span>
           </Link>
           <Link
             to="/contact"
@@ -60,7 +70,24 @@ const Navbar = () => {
                 : "text-gray-300",
             )}
           >
-            Contact
+            <span className="hidden sm:block">Contact</span>
+            <span className="sm:hidden">
+              <PhoneIcon size={18} className="mt-1" />
+            </span>
+          </Link>{" "}
+          <Link
+            to="/about-me"
+            className={clsx(
+              "p-4 hover:text-white sm:px-6",
+              isBrutalism
+                ? "border-r-2 border-black text-black hover:bg-black"
+                : "text-gray-300",
+            )}
+          >
+            <span className="hidden sm:block">About Me</span>
+            <span className="sm:hidden">
+              <CircleUserIcon size={18} className="mt-1" />
+            </span>
           </Link>
         </div>
         <button
