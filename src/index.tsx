@@ -1,16 +1,34 @@
+import clsx from "clsx";
 import { BookTextIcon, MailIcon } from "lucide-react";
+import { useTheme } from "./context/ThemeContext";
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
+  const { isBrutalism } = useTheme();
+
   return (
     <div>
-      <section className="flex justify-center gap-14 mt-[10vh]">
-        <div className="mt-4 flex justify-center flex-col gap-10">
+      <section className="mt-[10vh] flex justify-center gap-14">
+        <div className="mt-4 flex flex-col justify-center gap-10">
           <div>
-            <h1 className="text-5xl font-semibold">Mark Vergara</h1>
-            <p className="text-lg text-gray-400">Developer with a dream</p>
+            <h1
+              className={clsx(
+                "text-5xl font-semibold",
+                isBrutalism ? "text-black" : "text-white",
+              )}
+            >
+              Mark Vergara
+            </h1>
+            <p
+              className={clsx(
+                "text-lg",
+                isBrutalism ? "font-medium text-black" : "text-gray-400",
+              )}
+            >
+              Developer with a dream
+            </p>
           </div>
-          <div className="flex gap-1 flex-wrap">
-            <button className="p-2 bg-zinc-800 rounded-md flex items-center mt-2 px-4 hover:shadow-2xl hover:bg-zinc-700 border-zinc-700">
+          <div className="flex flex-wrap gap-1">
+            <button className="mt-2 flex items-center rounded-md border-zinc-700 bg-zinc-800 p-2 px-4 hover:bg-zinc-700 hover:shadow-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -23,11 +41,11 @@ const HomePage: React.FC = () => {
             </button>
             <a
               href="mailto:mark.jesusmanabat@gmail.com"
-              className="p-2 bg-zinc-800 rounded-md flex items-center mt-2  px-4 hover:shadow-2xl hover:bg-zinc-700 border-zinc-700"
+              className="mt-2 flex items-center rounded-md border-zinc-700 bg-zinc-800 p-2 px-4 hover:bg-zinc-700 hover:shadow-2xl"
             >
               <MailIcon size={18} />
             </a>
-            <button className="p-2 bg-zinc-800 rounded-md flex items-center mt-2 gap-2 px-4 hover:shadow-2xl hover:bg-zinc-700 border-zinc-700">
+            <button className="mt-2 flex items-center gap-2 rounded-md border-zinc-700 bg-zinc-800 p-2 px-4 hover:bg-zinc-700 hover:shadow-2xl">
               <BookTextIcon size={18} />
               Resume
             </button>
