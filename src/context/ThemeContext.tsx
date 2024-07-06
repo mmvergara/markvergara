@@ -1,7 +1,8 @@
-import { createContext, useContext, useState } from "react";
-
+import { createContext, useContext } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+type theme = "brutalism" | "minimalism";
 const themeContext = createContext<{
-  theme: "brutalism" | "minimalism";
+  theme: theme;
   isBrutalism: boolean;
   toggleTheme: () => void;
 }>({
@@ -23,12 +24,14 @@ export const ThemeContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [theme, setTheme] = useState<"brutalism" | "minimalism">("brutalism");
+  const [theme, setTheme] = useLocalStorage<theme>("theme", "minimalism");
 
   const toggleTheme = () => {
-    setTheme((prevTheme) =>
-      prevTheme === "brutalism" ? "minimalism" : "brutalism"
-    );
+    if (theme === "minimalism") {
+      setTheme("brutalism");
+    } else {
+      setTheme("minimalism");
+    }
   };
   const isBrutalism = theme === "brutalism";
   return (
