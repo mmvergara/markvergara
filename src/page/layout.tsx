@@ -8,8 +8,8 @@ const Layout = () => {
   return (
     <div
       className={clsx(
-        "h-[100vh] overflow-auto transition-all",
-        isBrutalism ? "bg-[#fef3c7]" : "",
+        "h-[100vh] w-[100vw] overflow-auto transition-all",
+        isBrutalism ? "bg-[#fef3c7]" : ""
       )}
     >
       <Navbar />
