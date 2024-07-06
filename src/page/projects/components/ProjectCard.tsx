@@ -9,6 +9,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
     title,
     deploymentDate,
     description,
+    imageWebpUrl,
     imageUrl,
     technologies,
     githubUrl,
@@ -29,14 +30,21 @@ const ProjectCard = ({ project }: { project: Project }) => {
           : "bg-zinc-800  border-zinc-700"
       )}
     >
-      <img
-        src={imageUrl}
-        alt="Project Image"
-        className={clsx(
-          "rounded-md w-[200px] h-[200px]",
-          isBrutalism ? "border-2 border-black" : "border-zinc-400"
-        )}
-      />
+      <picture>
+        <source srcSet={imageWebpUrl} type="image/webp" />
+        <img
+          src={imageUrl}
+          alt="Project Image"
+          role="presentation"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="auto"
+          className={clsx(
+            "rounded-md w-[200px] h-[200px]",
+            isBrutalism ? "border-2 border-black" : "border-zinc-400"
+          )}
+        />
+      </picture>
       <div className="flex flex-col text-center sm:text-left">
         <span className={clsx(isBrutalism ? "text-black" : "")}>
           <h2 className="font-bold text-3xl">{title}</h2>

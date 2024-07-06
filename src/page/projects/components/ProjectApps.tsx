@@ -5,7 +5,8 @@ const projects: Project[] = [
     title: "Kanban Light",
     description:
       "Open source light weight kanban board, 0ms initial load time utilizing localStorage",
-    deploymentDate: new Date(2021, 6, 1),
+    deploymentDate: new Date(2024, 5, 1),
+    imageWebpUrl: "kanban-light.webp",
     imageUrl: "kanban-light.png",
     technologies: ["React", "Tailwind", "Supabase"],
     githubUrl: "https://github.com/mmvergara/kanban-light",

@@ -17,6 +17,7 @@ export type Technologies =
 
 export type Project = {
   title: string;
+  imageWebpUrl: string;
   imageUrl: string;
   description: string;
 
