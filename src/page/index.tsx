@@ -17,7 +17,7 @@ const HomePage = () => {
                 isBrutalism ? "text-black" : "text-white"
               )}
             >
-              Lorem Ipsom
+              Mark Vergara
             </h1>
             <p
               className={clsx(
