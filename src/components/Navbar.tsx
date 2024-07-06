@@ -23,9 +23,9 @@ const Navbar = () => {
         <Link
           to="/"
           className={clsx(
-            "hidden p-[16px] px-6 hover:text-white sm:block",
+            "hidden p-[16px] px-6 sm:block",
             isBrutalism
-              ? "border-l-2 border-r-2 border-black text-black hover:bg-black hover:text-white"
+              ? "border-l-2 border-r-2 font-black border-black text-black bg-white hover:text-white hover:bg-black"
               : "text-gray-300"
           )}
         >
