@@ -2,14 +2,12 @@ import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import clsx from "clsx";
 import {
-  BookUserIcon,
   BoxIcon,
   CircleUserIcon,
   GiftIcon,
   HomeIcon,
   PhoneIcon,
   TelescopeIcon,
-  UserIcon,
 } from "lucide-react";
 
 const Navbar = () => {
@@ -18,21 +16,21 @@ const Navbar = () => {
     <div
       className={clsx(
         "w-full text-gray-300",
-        isBrutalism ? "border-b-2 border-black" : "",
+        isBrutalism ? "border-b-2 border-black" : ""
       )}
     >
       <nav className="text-l mx-auto flex max-w-[800px] items-center justify-between font-medium">
-        <button
-          onClick={toggleTheme}
+        <Link
+          to="/"
           className={clsx(
             "hidden p-[16px] px-6 hover:text-white sm:block",
             isBrutalism
               ? "border-l-2 border-r-2 border-black text-black hover:bg-black hover:text-white"
-              : "text-gray-300",
+              : "text-gray-300"
           )}
         >
           Portfolio
-        </button>
+        </Link>
         <div className="flex">
           <Link
             to="/"
@@ -40,7 +38,7 @@ const Navbar = () => {
               "p-4 hover:text-white sm:hidden sm:px-6",
               isBrutalism
                 ? "border-black text-black hover:bg-black sm:border-l-2"
-                : "text-gray-300",
+                : "text-gray-300"
             )}
           >
             <span className="sm:hidden">
@@ -53,7 +51,7 @@ const Navbar = () => {
               "p-4 hover:text-white sm:px-6",
               isBrutalism
                 ? "border-l-2 border-black text-black hover:bg-black"
-                : "text-gray-300",
+                : "text-gray-300"
             )}
           >
             <span className="hidden sm:block">Projects</span>
@@ -67,7 +65,7 @@ const Navbar = () => {
               "p-4 hover:text-white sm:px-6",
               isBrutalism
                 ? "border-l-2 border-r-2 border-black text-black hover:bg-black"
-                : "text-gray-300",
+                : "text-gray-300"
             )}
           >
             <span className="hidden sm:block">Contact</span>
@@ -81,7 +79,7 @@ const Navbar = () => {
               "p-4 hover:text-white sm:px-6",
               isBrutalism
                 ? "border-r-2 border-black text-black hover:bg-black"
-                : "text-gray-300",
+                : "text-gray-300"
             )}
           >
             <span className="hidden sm:block">About Me</span>
@@ -96,7 +94,7 @@ const Navbar = () => {
             "ml-12 mr-4 p-2",
             isBrutalism
               ? "brutal-btn border-l-2 border-r-2 border-black text-black"
-              : "animate-pulse text-gray-300",
+              : "animate-pulse text-gray-300"
           )}
         >
           {isBrutalism ? <BoxIcon size={18} /> : <GiftIcon size={18} />}
