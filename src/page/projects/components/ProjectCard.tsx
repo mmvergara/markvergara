@@ -7,7 +7,7 @@ import { Project } from "../../../types";
 const ProjectCard = ({ project }: { project: Project }) => {
   const {
     title,
-    date,
+    deploymentDate,
     description,
     imageUrl,
     technologies,
@@ -15,6 +15,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
     liveUrl,
   } = project;
   const { isBrutalism } = useTheme();
+
+  const formattedDate = deploymentDate.toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  });
   return (
     <article
       className={clsx(
@@ -46,6 +51,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <div className="flex gap-2 flex-row text-xs font-bold justify-center sm:justify-start">
             <a
               href={githubUrl}
+              target="_blank"
+              rel="noreferrer noopener"
               className={clsx(
                 "flex items-center gap-2 p-2 px-4 sm:flex-none",
                 isBrutalism
@@ -59,6 +66,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
             {liveUrl && (
               <a
                 href={liveUrl}
+                target="_blank"
+                rel="noreferrer noopener"
                 className={clsx(
                   "flex items-center gap-2 p-2 px-4 sm:flex-none",
                   isBrutalism
@@ -67,11 +76,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 )}
               >
                 <LinkIcon size={18} />
-                <span className="hidden sm:block">Live</span>
+                <span className="hidden sm:block">Live </span>
               </a>
             )}
             <a
               href={githubUrl}
+              target="_blank"
+              rel="noreferrer noopener"
               className={clsx(
                 "flex items-center gap-2 p-2 px-4 sm:flex-none",
                 isBrutalism
@@ -82,9 +93,19 @@ const ProjectCard = ({ project }: { project: Project }) => {
               <ImageIcon size={18} />
               <span className="hidden sm:block">Screenshots</span>
             </a>
+            <span
+              className={clsx(
+                "mt-auto ml-auto hidden md:block",
+                isBrutalism ? "text-black" : ""
+              )}
+            >
+              {formattedDate}
+            </span>
           </div>
-          <span>
-            <small>{date.toDateString()}</small>
+          <span
+            className={clsx("mt-2 sm:hidden", isBrutalism ? "text-black" : "")}
+          >
+            {formattedDate}
           </span>
         </div>
       </div>
