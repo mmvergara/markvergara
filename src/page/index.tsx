@@ -39,7 +39,7 @@ const HomePage = () => {
                 "flex items-center gap-2 p-2 px-4",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700 bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
+                  : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
               )}
             >
               <GithubIcon />
@@ -50,7 +50,7 @@ const HomePage = () => {
                 "flex items-center gap-2 p-2 px-4",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700 bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
+                  : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
               )}
             >
               <MailIcon size={18} />
@@ -60,7 +60,7 @@ const HomePage = () => {
                 "flex flex-1 items-center gap-2 p-2 px-4 sm:flex-none",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700 bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
+                  : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
               )}
             >
               <BookTextIcon size={18} />
