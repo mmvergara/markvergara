@@ -17,10 +17,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
   } = project;
   const { isBrutalism } = useTheme();
 
-  const formattedDate = deploymentDate.toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-  });
   return (
     <article
       className={clsx(
@@ -39,9 +35,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
           loading="lazy"
           decoding="async"
           fetchPriority="auto"
+          width={200}
+          height={200}
           className={clsx(
-            "rounded-md w-[200px] h-[200px]",
-            isBrutalism ? "border-2 border-black" : "border-zinc-400"
+            "rounded-md min-w-[200px] min-h-[200px]",
+            isBrutalism ? "border-2 border-black" : "border-zinc-700 border-[1px]"
           )}
         />
       </picture>
@@ -107,13 +105,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 isBrutalism ? "text-black" : ""
               )}
             >
-              {formattedDate}
+              {deploymentDate}
             </span>
           </div>
           <span
             className={clsx("mt-2 sm:hidden", isBrutalism ? "text-black" : "")}
           >
-            {formattedDate}
+            {deploymentDate}
           </span>
         </div>
       </div>
