@@ -14,13 +14,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
     technologies,
     githubUrl,
     liveUrl,
+    stars,
   } = project;
   const { isBrutalism } = useTheme();
 
   return (
     <article
       className={clsx(
-        "flex flex-col items-center sm:items-stretch sm:flex-row gap-4 w-full rounded-md p-4",
+        "flex flex-col items-center sm:items-stretch sm:flex-row gap-4 w-full rounded-md p-4  transition-colors",
         isBrutalism
           ? "bg-white border-2 border-black border-b-4 border-r-4"
           : "bg-zinc-800  border-zinc-700"
@@ -39,7 +40,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
           height={200}
           className={clsx(
             "rounded-md min-w-[200px] min-h-[200px]",
-            isBrutalism ? "border-2 border-black" : "border-zinc-700 border-[1px]"
+            isBrutalism
+              ? "border-2 border-black"
+              : "border-zinc-700 border-[1px]"
           )}
         />
       </picture>
@@ -63,11 +66,29 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 "flex items-center gap-2 p-2 px-4 sm:flex-none",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700 border-[1px] bg-zinc-900 hover:bg-zinc-700 hover:shadow-2xl"
+                  : "mt-2 rounded-md border-zinc-700 border-[1px] bg-zinc-900 group "
               )}
             >
               <GithubIcon size={18} />
-              <span className="hidden sm:block">Repo</span>
+              {stars && (
+                <span className="flex items-center">
+                  {stars}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="ml-[1px]"
+                  >
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </span>
+              )}
             </a>
             {liveUrl && (
               <a
@@ -78,7 +99,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   "flex items-center gap-2 p-2 px-4 sm:flex-none",
                   isBrutalism
                     ? "brutal-btn"
-                    : "mt-2 rounded-md border-zinc-700 border-[1px] bg-zinc-900 hover:bg-zinc-700 hover:shadow-2xl"
+                    : "mt-2 rounded-md border-zinc-700 border-[1px] bg-zinc-900  hover:text-cyan-500"
                 )}
               >
                 <LinkIcon size={18} />

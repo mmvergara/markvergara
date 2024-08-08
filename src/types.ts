@@ -25,6 +25,7 @@ export type Project = {
   liveUrl?: string;
   githubUrl: string;
   deploymentDate: string;
+  stars?: number;
 };
 
 const TechnologiesArr: Technologies[] = [

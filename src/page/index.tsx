@@ -86,7 +86,7 @@ const HomePage = () => {
             isBrutalism ? "text-black" : "text-white"
           )}
         >
-          Currently a 3rd year student but mostly self-taught, I like to build
+          Currently a 4th year student but mostly self-taught, I like to build
           stuff and learn new things.
         </p>
       </section>

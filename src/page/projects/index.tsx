@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ProjectCard from "./components/ProjectCard";
 import clsx from "clsx";
 import { useTheme } from "../../context/ThemeContext";
 import ProjectApps from "./components/ProjectApps";
@@ -9,7 +8,7 @@ const ProjectsPage = () => {
   const { isBrutalism } = useTheme();
   return (
     <div>
-      <div
+      {/* <div
         className={clsx(
           " border-2 flex rounded-md m-4 mb-6 items-center justify-around",
           isBrutalism
@@ -50,8 +49,7 @@ const ProjectsPage = () => {
         >
           Templates
         </button>
-      </div>
-
+      </div> */}
       <ProjectApps />
     </div>
   );

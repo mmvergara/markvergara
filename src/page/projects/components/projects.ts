@@ -22,17 +22,19 @@ export const projects: Project[] = [
     technologies: ["NextJS"],
     githubUrl: "https://github.com/mmvergara/nextjs-discord-bot-boilerplate/",
     liveUrl: "https://mmv-nextjs-discord-bot-boilerplate.vercel.app/",
+    stars: 12,
   },
   {
     title: "Supadart",
     description:
-      "Tool that people actually use, it got 21 stars as of aug 2024. This tool Generate Flutter / Dart 🎯 classes from your Supabase schema providing you with Typesafe Supabase Flutter Queries",
+      "Tool that people actually use, This tool Generate Flutter / Dart 🎯 classes from your Supabase schema providing you with Typesafe Supabase Flutter Queries",
     deploymentDate: "July 2024",
     imageWebpUrl: "supadart.webp",
     imageUrl: "supadart.png",
     technologies: ["Dart", "Flutter", "Supabase"],
     githubUrl: "https://github.com/mmvergara/supadart",
     liveUrl: "https://supadart.vercel.app/",
+    stars: 21,
   },
   {
     title: "PSAU Rant Web",
@@ -59,7 +61,7 @@ export const projects: Project[] = [
   {
     title: "React Firebase Auth Template",
     description:
-      "Got tired of setting up firebase auth in react for clients so I made this template earned 10 stars as of aug 2024",
+      "Got tired of setting up firebase auth in react for clients so I made this template.",
     deploymentDate: "Jun 2024",
     imageWebpUrl: "react-firebase-auth-template.webp",
     imageUrl: "react-firebase-auth-template.png",
@@ -67,5 +69,19 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/mmvergara/react-firebase-auth-template",
     liveUrl:
       "https://react-firebase-auth-templ-mmvergaras-projects.vercel.app/",
+    stars: 10,
+  },
+  {
+    title: "Nextjs MongoDB Prisma Auth Template",
+    description:
+      "Template repository for building a Next.js application with MongoDB, Prisma, and Next Auth authentication. 🚀",
+    deploymentDate: "May 2024",
+    imageWebpUrl: "nextjs-mongodb-prisma-auth-template.webp",
+    imageUrl: "nextjs-mongodb-prisma-auth-template.png",
+    technologies: ["NextJS", "MongoDB"],
+    githubUrl:
+      "https://github.com/mmvergara/nextjs-mongodb-prisma-auth-template",
+    liveUrl: "https://nextjs-mongodb-prisma-auth-template.vercel.app/",
+    stars: 16,
   },
 ];
