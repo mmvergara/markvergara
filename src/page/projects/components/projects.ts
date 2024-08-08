@@ -26,12 +26,46 @@ export const projects: Project[] = [
   {
     title: "Supadart",
     description:
-      "Tool that people actually use, it got 18 stars as of jul 2024. This tool Generate Flutter / Dart 🎯 classes from your Supabase schema providing you with Typesafe Supabase Flutter Queries",
+      "Tool that people actually use, it got 21 stars as of aug 2024. This tool Generate Flutter / Dart 🎯 classes from your Supabase schema providing you with Typesafe Supabase Flutter Queries",
     deploymentDate: "July 2024",
     imageWebpUrl: "supadart.webp",
     imageUrl: "supadart.png",
     technologies: ["Dart", "Flutter", "Supabase"],
     githubUrl: "https://github.com/mmvergara/supadart",
     liveUrl: "https://supadart.vercel.app/",
+  },
+  {
+    title: "PSAU Rant Web",
+    description:
+      "I made this becacuse my classmates are frustrated that `quizlet.com` is not free. A platform for students to create flashcards and use them to study 📚. Has gather 49 users as of Aug 2024. Initially made to rant about school thus the name suggest",
+    deploymentDate: "March 2023",
+    imageWebpUrl: "psau-rant-web.webp",
+    imageUrl: "psau-rant-web.png",
+    technologies: ["NextJS", "Firebase"],
+    githubUrl: "https://github.com/mmvergara/psau-rant/",
+    liveUrl: "https://psaurant.vercel.app/",
+  },
+  {
+    title: "PSAU Rant Flutter",
+    description:
+      "Mobile Version of PSAU Rant to be able to save flashcards cause there is no internet in the school",
+    deploymentDate: "March 2023",
+    imageWebpUrl: "psau-rant-flutter.webp",
+    imageUrl: "psau-rant-flutter.png",
+    technologies: ["Dart", "Flutter", "Firebase"],
+    githubUrl: "https://github.com/mmvergara/psau-rant-flutter/",
+    // liveUrl: "https://github.com/mmvergara/psau-rant-flutter",
+  },
+  {
+    title: "React Firebase Auth Template",
+    description:
+      "Got tired of setting up firebase auth in react for clients so I made this template earned 10 stars as of aug 2024",
+    deploymentDate: "Jun 2024",
+    imageWebpUrl: "react-firebase-auth-template.webp",
+    imageUrl: "react-firebase-auth-template.png",
+    technologies: ["React", "Firebase"],
+    githubUrl: "https://github.com/mmvergara/react-firebase-auth-template",
+    liveUrl:
+      "https://react-firebase-auth-templ-mmvergaras-projects.vercel.app/",
   },
 ];
