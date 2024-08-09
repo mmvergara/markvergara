@@ -74,7 +74,7 @@ const Navbar = () => {
             </span>
           </Link>{" "}
           <Link
-            to="/about-me"
+            to="/about"
             className={clsx(
               "p-4 hover:text-white sm:px-6",
               isBrutalism

@@ -16,7 +16,16 @@ const ProjectApps = () => {
           isBrutalism ? "text-black" : "text-white"
         )}
       >
-        Not finished Yet...
+        Not finished Yet... More Project on my
+        <a
+          href="https://github.com/mmvergara"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="underline"
+        >
+          {" "}
+          GitHub
+        </a>
       </span>
     </section>
   );

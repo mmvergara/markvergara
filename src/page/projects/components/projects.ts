@@ -56,7 +56,6 @@ export const projects: Project[] = [
     imageUrl: "psau-rant-flutter.png",
     technologies: ["Dart", "Flutter", "Firebase"],
     githubUrl: "https://github.com/mmvergara/psau-rant-flutter/",
-    // liveUrl: "https://github.com/mmvergara/psau-rant-flutter",
   },
   {
     title: "React Firebase Auth Template",
