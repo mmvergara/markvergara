@@ -28,19 +28,19 @@ export type Project = {
   stars?: number;
 };
 
-const TechnologiesArr: Technologies[] = [
-  "React",
-  "NextJS",
-  "Typescript",
-  "Tailwind",
-  "Dart",
-  "Flutter",
-  "Golang",
-  "Python",
-  "NodeJS",
-  "Firebase",
-  "MongoDB",
-  "PostgreSQL",
-  "Supabase",
-  "Vue",
-];
+// const TechnologiesArr: Technologies[] = [
+//   "React",
+//   "NextJS",
+//   "Typescript",
+//   "Tailwind",
+//   "Dart",
+//   "Flutter",
+//   "Golang",
+//   "Python",
+//   "NodeJS",
+//   "Firebase",
+//   "MongoDB",
+//   "PostgreSQL",
+//   "Supabase",
+//   "Vue",
+// ];

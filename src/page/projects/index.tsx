@@ -1,11 +1,11 @@
-import { useState } from "react";
-import clsx from "clsx";
-import { useTheme } from "../../context/ThemeContext";
+// import { useState } from "react";
+// import clsx from "clsx";
+// import { useTheme } from "../../context/ThemeContext";
 import ProjectApps from "./components/ProjectApps";
-type ProjectSection = "Apps" | "Packages" | "Templates";
+// type ProjectSection = "Apps" | "Packages" | "Templates";
 const ProjectsPage = () => {
-  const [selectedSection, setSection] = useState<ProjectSection>("Apps");
-  const { isBrutalism } = useTheme();
+  // const [selectedSection, setSection] = useState<ProjectSection>("Apps");
+  // const { isBrutalism } = useTheme();
   return (
     <div>
       {/* <div
