@@ -17,7 +17,7 @@ const ContactPage = () => {
         Feel free to reach out to me, I'm always open to oppurtunities and
         collaborations.
       </p>
-      <div className="flex gap-2 px-2">
+      <div className="flex justify-center items-center flex-wrap gap-2 px-2">
         <a
           href="https://github.com/mmvergara"
           target="_blank"
