@@ -36,7 +36,7 @@ const HomePage = () => {
               target="_blank"
               rel="noreferrer noopener"
               className={clsx(
-                "flex items-center gap-2 p-2 px-4",
+                "flex items-center gap-2 p-2 px-4 border-[1px]",
                 isBrutalism
                   ? "brutal-btn"
                   : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
@@ -47,7 +47,7 @@ const HomePage = () => {
             <a
               href="mailto:mark.jesusmanabat@gmail.com"
               className={clsx(
-                "flex items-center gap-2 p-2 px-4",
+                "flex items-center gap-2 p-2 px-4 border-[1px]",
                 isBrutalism
                   ? "brutal-btn"
                   : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
@@ -55,9 +55,12 @@ const HomePage = () => {
             >
               <MailIcon size={18} />
             </a>
-            <button
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer noopener"
               className={clsx(
-                "flex flex-1 items-center gap-2 p-2 px-4 sm:flex-none",
+                "flex flex-1 items-center gap-2 p-2 px-4 sm:flex-none border-[1px]",
                 isBrutalism
                   ? "brutal-btn"
                   : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
@@ -65,7 +68,7 @@ const HomePage = () => {
             >
               <BookTextIcon size={18} />
               Resume
-            </button>
+            </a>
           </div>
         </div>
         <div>
