@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { useTheme } from "../context/ThemeContext";
 import clsx from "clsx";
-import { Analytics } from '@vercel/analytics/react';
 
 const Layout = () => {
   const { isBrutalism } = useTheme();
@@ -17,7 +16,6 @@ const Layout = () => {
       <main className="mx-auto w-full max-w-[800px]">
         <Outlet />
       </main>
-      <Analytics />
     </div>
   );
 };
