@@ -5,6 +5,13 @@ import GithubIcon from "../../components/icons/github";
 
 const ContactPage = () => {
   const { isBrutalism } = useTheme();
+
+  const linksStyles = clsx(
+    "flex items-center flex-col justify-center gap-2 p-8 hover:scale-105 transition",
+    isBrutalism
+      ? "brutal-btn"
+      : "rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
+  );
   return (
     <section
       className={clsx(
@@ -13,48 +20,32 @@ const ContactPage = () => {
       )}
     >
       <h1 className="text-3xl font-semibold">Contact</h1>
-      <p>
+      <p className="text-center">
         Feel free to reach out to me, I'm always open to oppurtunities and
         collaborations.
       </p>
-      <div className="flex justify-center items-center flex-wrap gap-2 px-2">
+      <div className="flex-wrap gap-4 mt-10 px-2 grid grid-cols-2 gird-rows-2">
         <a
           href="https://github.com/mmvergara"
           target="_blank"
           rel="noreferrer noopener"
-          className={clsx(
-            "flex items-center justify-center gap-2 p-2 px-4",
-            isBrutalism
-              ? "brutal-btn"
-              : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
-          )}
+          className={linksStyles}
         >
-          Github
           <GithubIcon />
+          Github
         </a>
         <a
           href="mailto:mark.jesusmanabat@gmail.com"
-          className={clsx(
-            "flex items-center justify-center gap-2 p-2 px-4",
-            isBrutalism
-              ? "brutal-btn"
-              : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
-          )}
+          className={linksStyles}
         >
-          Email <MailIcon size={18} />
+          <MailIcon size={18} /> Email
         </a>
         <a
           href="https://www.linkedin.com/in/mark-vergara-8436b0243/"
           target="_blank"
           rel="noreferrer noopener"
-          className={clsx(
-            "flex items-center justify-center gap-2 p-2 px-4",
-            isBrutalism
-              ? "brutal-btn"
-              : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
-          )}
+          className={linksStyles}
         >
-          LinkedIn
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -64,6 +55,24 @@ const ContactPage = () => {
           >
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
           </svg>
+          LinkedIn
+        </a>{" "}
+        <a
+          href="https://www.linkedin.com/in/mark-vergara-8436b0243/"
+          target="_blank"
+          rel="noreferrer noopener"
+          className={linksStyles}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill={isBrutalism ? "black" : "white"}
+          >
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+          LinkedIn
         </a>
       </div>
     </section>

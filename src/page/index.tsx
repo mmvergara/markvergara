@@ -13,15 +13,15 @@ const HomePage = () => {
           <div>
             <h1
               className={clsx(
-                "mb-2 text-5xl font-semibold",
-                isBrutalism ? "text-black" : "text-[#e0dfd6]"
+                "mb-2 text-5xl font-semibold tracking-wide",
+                isBrutalism ? "text-black" : "text-[#dd6e6c]"
               )}
             >
               Mark Vergara
             </h1>
             <p
               className={clsx(
-                "text-center text-lg sm:text-left",
+                "text-center text-xl sm:text-left",
                 isBrutalism ? "font-medium text-black" : "text-gray-400"
               )}
             >

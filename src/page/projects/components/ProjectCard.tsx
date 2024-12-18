@@ -42,14 +42,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
             "rounded-md min-w-[200px] min-h-[200px]",
             isBrutalism
               ? "border-2 border-black"
-              : "border-[#161c20] border-[8px]"
+              : "border-[#1b1a20] border-[8px]"
           )}
         />
       </picture>
       <div className="flex flex-col text-center sm:text-left">
         <span className={clsx(isBrutalism ? "text-black" : "text-primary-text")}>
-          <h2 className="font-bold text-3xl">{title}</h2>
-          <p className="text-sm">{description}</p>
+          <h2 className={clsx("font-bold text-3xl", isBrutalism ? "text-black" : "text-[#dd6e6c]")}>{title}</h2>
+          <p className="text-md">{description}</p>
         </span>
         <div className="flex flex-col mt-4 sm:mt-auto">
           <div className="flex gap-2 mb-2 flex-wrap justify-center sm:justify-start">
@@ -103,7 +103,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 )}
               >
                 <LinkIcon size={18} />
-                <span className="hidden sm:block">Live </span>
+                <span className="hidden sm:block">Live</span>
               </a>
             )}
             <a
