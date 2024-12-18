@@ -24,7 +24,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         "flex flex-col items-center sm:items-stretch sm:flex-row gap-4 w-full rounded-md p-4  transition-colors",
         isBrutalism
           ? "bg-white border-2 border-black border-b-4 border-r-4"
-          : "bg-zinc-800  border-zinc-700"
+          : "bg-card  border-zinc-700"
       )}
     >
       <picture>
@@ -42,12 +42,12 @@ const ProjectCard = ({ project }: { project: Project }) => {
             "rounded-md min-w-[200px] min-h-[200px]",
             isBrutalism
               ? "border-2 border-black"
-              : "border-zinc-700 border-[1px]"
+              : "border-[#161c20] border-[8px]"
           )}
         />
       </picture>
       <div className="flex flex-col text-center sm:text-left">
-        <span className={clsx(isBrutalism ? "text-black" : "")}>
+        <span className={clsx(isBrutalism ? "text-black" : "text-primary-text")}>
           <h2 className="font-bold text-3xl">{title}</h2>
           <p className="text-sm">{description}</p>
         </span>

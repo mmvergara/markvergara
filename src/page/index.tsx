@@ -14,7 +14,7 @@ const HomePage = () => {
             <h1
               className={clsx(
                 "mb-2 text-5xl font-semibold",
-                isBrutalism ? "text-black" : "text-white"
+                isBrutalism ? "text-black" : "text-[#e0dfd6]"
               )}
             >
               Mark Vergara
@@ -29,17 +29,20 @@ const HomePage = () => {
             </p>
           </div>
           <div
-            className={clsx("flex flex-wrap", isBrutalism ? "gap-2" : "gap-1")}
+            className={clsx(
+              "flex flex-wrap justify-center md:justify-start text-[#e0dfd6]",
+              isBrutalism ? "gap-3" : "gap-2"
+            )}
           >
             <a
               href="https://github.com/mmvergara"
               target="_blank"
               rel="noreferrer noopener"
               className={clsx(
-                "flex items-center gap-2 p-2 px-4 border-[1px]",
+                "flex items-center gap-2 p-2 px-4 ",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
+                  : "mt-2 rounded-full bg-[#32363f] hover:bg-zinc-700 hover:shadow-2xl"
               )}
             >
               <GithubIcon />
@@ -47,10 +50,10 @@ const HomePage = () => {
             <a
               href="mailto:mark.jesusmanabat@gmail.com"
               className={clsx(
-                "flex items-center gap-2 p-2 px-4 border-[1px]",
+                "flex items-center gap-2 p-2 px-4 ",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
+                  : "mt-2 rounded-full bg-[#32363f] hover:bg-zinc-700 hover:shadow-2xl"
               )}
             >
               <MailIcon size={18} />
@@ -60,10 +63,10 @@ const HomePage = () => {
               target="_blank"
               rel="noreferrer noopener"
               className={clsx(
-                "flex flex-1 items-center gap-2 p-2 px-4 sm:flex-none border-[1px]",
+                "flex items-center gap-2 p-2 px-4 ",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700  bg-zinc-800 hover:bg-zinc-700 hover:shadow-2xl"
+                  : "mt-2 rounded-full bg-[#32363f] hover:bg-zinc-700 hover:shadow-2xl"
               )}
             >
               <BookTextIcon size={18} />
@@ -86,7 +89,7 @@ const HomePage = () => {
         <p
           className={clsx(
             "text-center text-sm font-medium sm:text-left",
-            isBrutalism ? "text-black" : "text-white"
+            isBrutalism ? "text-black" : "text-[#e0dfd6]"
           )}
         >
           Currently a 4th year student but mostly self-taught, I like to build

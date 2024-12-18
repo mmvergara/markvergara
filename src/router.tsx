@@ -6,7 +6,6 @@ import ContactPage from "./page/contact/index.tsx";
 import AboutPage from "./page/about/index.tsx";
 
 const router = createBrowserRouter([
-  // I recommend you reflect the routes here in the pages folder
   {
     path: "/",
     element: <Layout />,

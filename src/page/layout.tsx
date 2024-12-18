@@ -9,7 +9,7 @@ const Layout = () => {
     <div
       className={clsx(
         "h-[100vh] w-[100vw] overflow-auto transition-all",
-        isBrutalism ? "bg-[#fef3c7]" : ""
+        isBrutalism ? "bg-[#fef3c7]" : "bg-primary"
       )}
     >
       <Navbar />

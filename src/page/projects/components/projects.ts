@@ -22,7 +22,7 @@ export const projects: Project[] = [
     technologies: ["NextJS"],
     githubUrl: "https://github.com/mmvergara/nextjs-discord-bot-boilerplate/",
     liveUrl: "https://mmv-nextjs-discord-bot-boilerplate.vercel.app/",
-    stars: 12,
+    stars: 16,
   },
   {
     title: "Supadart",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     technologies: ["Dart", "Flutter", "Supabase"],
     githubUrl: "https://github.com/mmvergara/supadart",
     liveUrl: "https://supadart.vercel.app/",
-    stars: 21,
+    stars: 46,
   },
   {
     title: "PSAU Rant Web",
@@ -66,9 +66,7 @@ export const projects: Project[] = [
     imageUrl: "react-firebase-auth-template.png",
     technologies: ["React", "Firebase"],
     githubUrl: "https://github.com/mmvergara/react-firebase-auth-template",
-    liveUrl:
-      "https://react-firebase-auth-templ-mmvergaras-projects.vercel.app/",
-    stars: 10,
+    stars: 12,
   },
   {
     title: "Nextjs MongoDB Prisma Auth Template",
@@ -80,7 +78,6 @@ export const projects: Project[] = [
     technologies: ["NextJS", "MongoDB"],
     githubUrl:
       "https://github.com/mmvergara/nextjs-mongodb-prisma-auth-template",
-    liveUrl: "https://nextjs-mongodb-prisma-auth-template.vercel.app/",
-    stars: 16,
+    stars: 18,
   },
 ];
