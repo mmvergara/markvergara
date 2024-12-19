@@ -75,7 +75,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 "flex items-center gap-2 p-2 px-4 sm:flex-none",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700 border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
+                  : "mt-2 rounded-md border-[#1b1a1f] border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
               )}
             >
               <GithubIcon size={18} />
@@ -108,7 +108,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   "flex items-center gap-2 p-2 px-4 sm:flex-none",
                   isBrutalism
                     ? "brutal-btn"
-                    : "mt-2 rounded-md border-zinc-700 border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
+                    : "mt-2 rounded-md border-[#1b1a1f] border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
                 )}
               >
                 <LinkIcon size={18} />
@@ -123,7 +123,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 "flex items-center gap-2 p-2 px-4 sm:flex-none",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700 border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
+                  : "mt-2 rounded-md border-[#1b1a1f] border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
               )}
             >
               <ImageIcon size={18} />
