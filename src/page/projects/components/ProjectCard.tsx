@@ -21,10 +21,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <article
       className={clsx(
-        "flex flex-col items-center sm:items-stretch sm:flex-row gap-4 w-full rounded-md p-4  transition-colors",
+        "flex flex-col items-center sm:items-stretch sm:flex-row gap-8 w-full rounded-md p-8  transition-colors",
         isBrutalism
           ? "bg-white border-2 border-black border-b-4 border-r-4"
-          : "bg-card  border-zinc-700"
+          : "bg-[#202228]  border-zinc-700"
       )}
     >
       <picture>
@@ -47,8 +47,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
         />
       </picture>
       <div className="flex flex-col text-center sm:text-left">
-        <span className={clsx(isBrutalism ? "text-black" : "text-primary-text")}>
-          <h2 className={clsx("font-bold text-3xl", isBrutalism ? "text-black" : "text-[#dd6e6c]")}>{title}</h2>
+        <span
+          className={clsx(isBrutalism ? "text-black" : "text-primary-text")}
+        >
+          <h2
+            className={clsx(
+              "font-bold text-3xl",
+              isBrutalism ? "text-black" : "text-[#dd6e6c]"
+            )}
+          >
+            {title}
+          </h2>
           <p className="text-md">{description}</p>
         </span>
         <div className="flex flex-col mt-4 sm:mt-auto">

@@ -13,7 +13,7 @@ const Layout = () => {
       )}
     >
       <Navbar />
-      <main className="mx-auto w-full max-w-[800px]">
+      <main className="mx-auto w-full max-w-[900px]">
         <Outlet />
       </main>
     </div>
