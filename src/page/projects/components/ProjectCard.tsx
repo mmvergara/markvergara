@@ -75,7 +75,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 "flex items-center gap-2 p-2 px-4 sm:flex-none",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700 border-[1px] bg-zinc-900 group "
+                  : "mt-2 rounded-md border-zinc-700 border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
               )}
             >
               <GithubIcon size={18} />
@@ -92,7 +92,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    className="ml-[1px]"
+                    className="ml-[1px] group-hover:text-[#dd6e6c]"
                   >
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                   </svg>
@@ -108,7 +108,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   "flex items-center gap-2 p-2 px-4 sm:flex-none",
                   isBrutalism
                     ? "brutal-btn"
-                    : "mt-2 rounded-md border-zinc-700 border-[1px] bg-zinc-900  hover:text-cyan-500"
+                    : "mt-2 rounded-md border-zinc-700 border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
                 )}
               >
                 <LinkIcon size={18} />
@@ -123,7 +123,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 "flex items-center gap-2 p-2 px-4 sm:flex-none",
                 isBrutalism
                   ? "brutal-btn"
-                  : "mt-2 rounded-md border-zinc-700 border-[1px] bg-zinc-900 hover:bg-zinc-700 hover:shadow-2xl"
+                  : "mt-2 rounded-md border-zinc-700 border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
               )}
             >
               <ImageIcon size={18} />
