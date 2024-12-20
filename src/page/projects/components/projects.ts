@@ -39,7 +39,7 @@ export const projects: Project[] = [
   {
     title: "PSAU Rant Web",
     description:
-      "I made this becacuse my classmates are frustrated that `quizlet.com` is not free. A platform for students to create flashcards and use them to study 📚. Has gather 49 users as of Aug 2024. Initially made to rant about school thus the name suggest",
+      "I made this becacuse my classmates are frustrated that `quizlet.com` is not free. A platform for students to create flashcards and use them to study 📚. Has gather 49 users as of Aug 2024",
     deploymentDate: "March 2023",
     imageWebpUrl: "psau-rant-web.webp",
     imageUrl: "psau-rant-web.png",

@@ -9,11 +9,11 @@ const HomePage = () => {
   return (
     <div>
       <section className="mt-8 flex flex-col-reverse items-center justify-center sm:mt-[10vh] sm:flex-row sm:gap-14">
-        <div className="mt-4 flex flex-col justify-center gap-6 sm:gap-10">
+        <div className="mt-4 flex flex-col justify-center gap-6 sm:gap-10 animate-[fadeIn_0.8s_ease-in]">
           <div>
             <h1
               className={clsx(
-                "mb-2 text-5xl font-semibold tracking-wide",
+                "mb-2 text-5xl font-semibold tracking-wide animate-[slideDown_0.5s_ease-out]",
                 isBrutalism ? "text-black" : "text-[#dd6e6c]"
               )}
             >
@@ -21,7 +21,7 @@ const HomePage = () => {
             </h1>
             <p
               className={clsx(
-                "text-center text-xl sm:text-left",
+                "text-center text-xl sm:text-left animate-[slideUp_0.5s_ease-out_0.2s] opacity-0 [animation-fill-mode:forwards]",
                 isBrutalism ? "font-medium text-black" : "text-gray-400"
               )}
             >
@@ -30,7 +30,7 @@ const HomePage = () => {
           </div>
           <div
             className={clsx(
-              "flex flex-wrap justify-center md:justify-start text-[#e0dfd6]",
+              "flex flex-wrap justify-center md:justify-start text-[#e0dfd6] animate-[fadeIn_0.5s_ease-out_0.4s] opacity-0 [animation-fill-mode:forwards]",
               isBrutalism ? "gap-3" : "gap-2"
             )}
           >
@@ -74,12 +74,12 @@ const HomePage = () => {
             </a>
           </div>
         </div>
-        <div>
+        <div className="animate-[scaleIn_0.6s_ease-out]">
           <img
             src={Hero}
             alt="profile"
             className={clsx(
-              "h-[200px] w-[200px] rounded-full border-[2px] shadow-lg sm:h-[250px] sm:w-[250px]",
+              "h-[200px] w-[200px] rounded-full border-[2px] shadow-lg sm:h-[250px] sm:w-[250px] hover:scale-105 transition-transform duration-300",
               isBrutalism ? "border-4 border-black" : "border-zinc-400"
             )}
           />
@@ -88,7 +88,7 @@ const HomePage = () => {
       <section className="mt-8 flex justify-center px-8">
         <p
           className={clsx(
-            "text-center text-sm font-medium sm:text-left",
+            "text-center text-sm font-medium sm:text-left animate-[fadeIn_0.5s_ease-out_0.6s] opacity-0 [animation-fill-mode:forwards]",
             isBrutalism ? "text-black" : "text-[#e0dfd6]"
           )}
         >

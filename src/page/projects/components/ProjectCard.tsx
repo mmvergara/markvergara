@@ -21,10 +21,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <article
       className={clsx(
-        "flex flex-col items-center sm:items-stretch sm:flex-row gap-8 w-full rounded-md p-8  transition-colors",
+        "flex flex-col items-center sm:items-stretch sm:flex-row gap-8 w-full rounded-md p-8 transition-all duration-300 hover:scale-[1.02]",
         isBrutalism
-          ? "bg-white border-2 border-black border-b-4 border-r-4"
-          : "bg-[#202228]  border-zinc-700"
+          ? "bg-white border-2 border-black border-b-4 border-r-4 hover:border-b-2 hover:border-r-2"
+          : "bg-[#202228] border-zinc-700 hover:shadow-lg"
       )}
     >
       <picture>
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           width={200}
           height={200}
           className={clsx(
-            "rounded-md min-w-[200px] min-h-[200px]",
+            "rounded-md min-w-[200px] min-h-[200px] transition-transform duration-300 group-hover:scale-105",
             isBrutalism
               ? "border-2 border-black"
               : "border-[#1b1a20] border-[8px]"
@@ -72,10 +72,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
               target="_blank"
               rel="noreferrer noopener"
               className={clsx(
-                "flex items-center gap-2 p-2 px-4 sm:flex-none",
+                "flex items-center gap-2 p-2 px-4 sm:flex-none transition-all duration-200",
                 isBrutalism
-                  ? "brutal-btn"
-                  : "mt-2 rounded-md border-[#1b1a1f] border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
+                  ? "brutal-btn hover:-translate-y-[2px]"
+                  : "mt-2 rounded-md border-[#1b1a1f] border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c] hover:-translate-y-[2px]"
               )}
             >
               <GithubIcon size={18} />
@@ -105,10 +105,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 target="_blank"
                 rel="noreferrer noopener"
                 className={clsx(
-                  "flex items-center gap-2 p-2 px-4 sm:flex-none",
+                  "flex items-center gap-2 p-2 px-4 sm:flex-none transition-all duration-200",
                   isBrutalism
-                    ? "brutal-btn"
-                    : "mt-2 rounded-md border-[#1b1a1f] border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
+                    ? "brutal-btn hover:-translate-y-[2px]"
+                    : "mt-2 rounded-md border-[#1b1a1f] border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c] hover:-translate-y-[2px]"
                 )}
               >
                 <LinkIcon size={18} />
@@ -120,10 +120,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
               target="_blank"
               rel="noreferrer noopener"
               className={clsx(
-                "flex items-center gap-2 p-2 px-4 sm:flex-none",
+                "flex items-center gap-2 p-2 px-4 sm:flex-none transition-all duration-200",
                 isBrutalism
-                  ? "brutal-btn"
-                  : "mt-2 rounded-md border-[#1b1a1f] border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c]"
+                  ? "brutal-btn hover:-translate-y-[2px]"
+                  : "mt-2 rounded-md border-[#1b1a1f] border-[2px] bg-[#1b1a1f] hover:border-[#dd6e6c] hover:-translate-y-[2px]"
               )}
             >
               <ImageIcon size={18} />

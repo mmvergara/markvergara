@@ -25,7 +25,7 @@ const Navbar = () => {
           className={clsx(
             "hidden p-[16px] px-6 sm:block",
             isBrutalism
-              ? "border-l-2 border-r-2 font-black border-black text-black bg-white hover:text-white hover:bg-black"
+              ? "border-l-2 border-r-2 border-black text-black bg-white hover:text-white hover:bg-black"
               : "text-gray-300"
           )}
         >

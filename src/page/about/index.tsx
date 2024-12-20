@@ -1,28 +1,74 @@
 import clsx from "clsx";
 import { useTheme } from "../../context/ThemeContext";
+import { motion } from "framer-motion";
 
 const AboutPage = () => {
   const { isBrutalism } = useTheme();
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
+  const highlightClass = clsx(
+    "font-semibold",
+    isBrutalism ? "text-black" : "text-[#dd6e6c]"
+  );
+
   return (
-    <section
+    <motion.section
+      variants={container}
+      initial="hidden"
+      animate="show"
       className={clsx(
-        "p-4 flex flex-col gap-4",
-        isBrutalism ? "text-black " : "text-white"
+        "p-4 pt-12 flex flex-col gap-6 max-w-3xl mx-auto",
+        isBrutalism ? "text-black" : "text-white"
       )}
     >
-      <h1 className="text-3xl font-semibold">About Me:</h1>
-      <p>
-        I'm Mark Vergara, currently a 4th year student taking up BS Information
-        Technology, but the majority of my knowledge is self-taught. <br />{" "}
-        <br />
-        In my 3rd year of college i got 3-month remote part-time job as a junior
-        developer in a company based in Manila. I always look forward in
-        collaborative projects and learn from others as i believe its one of the
-        best way to learn and grow. <br /> <br />
-        I'm now looking for opportunities to work for my upcoming On the Job
-        Training coming early in 2025.
-      </p>
-    </section>
+      <motion.h1 variants={item} className="text-3xl font-semibold">
+        About Me
+      </motion.h1>
+
+      <motion.p variants={item} className="text-lg leading-relaxed">
+        Hi! I'm <span className={highlightClass}>Mark Vergara</span>, currently
+        a <span className={highlightClass}>4th year student</span> pursuing a BS
+        in Information Technology. While my formal education has provided a
+        strong foundation, I'm proud to say that the majority of my technical
+        knowledge is self-taught through hands-on experience and continuous
+        learning.
+      </motion.p>
+
+      <motion.div variants={item} className="space-y-4 text-lg">
+        <p className="leading-relaxed">
+          During my 3rd year of college, I gained valuable experience through a{" "}
+          <span className={highlightClass}>
+            3-month remote part-time position
+          </span>{" "}
+          as a junior developer at a company based in Manila. This meant a lot
+          to me as those 3 months of experience was the first time i was able to
+          work with a team and learn from them.
+        </p>
+
+        <p className="leading-relaxed text-lg">
+          I'm currently seeking opportunities for my upcoming{" "}
+          <span className={highlightClass}>
+            Internship (On the Job Training)
+          </span>{" "}
+          in early 2025. I'm 2025. I'm excited to apply my skills in a
+          professional setting and continue growing as a developer.
+        </p>
+      </motion.div>
+    </motion.section>
   );
 };
 
