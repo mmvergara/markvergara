@@ -1,0 +1,117 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="navbar">
+  <nav>
+    <a href="/" class="portfolio-link">Portfolio</a>
+    <div class="nav-links">
+      <a href="/" class="mobile-only" data-astro-prefetch="load">
+        <span class="desktop-only">Home</span>
+        <Icon name="home" size={18} class="icon" />
+      </a>
+      <a href="/projects" data-astro-prefetch="load">
+        <span class="desktop-only">Projects</span>
+        <Icon name="telescope" size={18} class="icon mobile-only" />
+      </a>
+      <a href="/contact" data-astro-prefetch="load">
+        <span class="desktop-only">Contact</span>
+        <Icon name="phone" size={18} class="icon mobile-only" />
+      </a>
+      <a href="/about" data-astro-prefetch="load">
+        <span class="desktop-only">About Me</span>
+        <Icon name="circle-user" size={18} class="icon mobile-only" />
+      </a>
+    </div>
+    <div id="crown">
+      <Icon name="crown" size={28} class="crown-icon" />
+    </div>
+  </nav>
+</div>
+
+<style>
+  .navbar {
+    width: 100%;
+    color: #d1d5db;
+  }
+
+  html.brutalism .navbar {
+    border-bottom: 2px solid black;
+  }
+
+  nav {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  a {
+    padding: 18px 24px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .portfolio-link {
+    display: none;
+  }
+
+  .portfolio-link:hover {
+    color: white;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .icon {
+    margin-top: 4px;
+  }
+
+  #crown {
+    padding: 8px;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    margin-right: 12px;
+  }
+
+  .crown-icon {
+    color: var(--primary);
+  }
+
+  @media (min-width: 640px) {
+    .portfolio-link {
+      display: block;
+    }
+
+    .desktop-only {
+      display: block;
+    }
+
+    .mobile-only {
+      display: none;
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+</style>

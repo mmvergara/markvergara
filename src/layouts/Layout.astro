@@ -1,0 +1,121 @@
+---
+type Props = {
+  title: string;
+};
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title || "Mark Vergara | Dev"}</title>
+    <meta
+      name="description"
+      content="Obsessed with simplicity, wary of premature optimization, and loyalty to the locality of behavior."
+    />
+    <meta name="author" content="Mark Vergara" />
+    <meta name="creator" content="Mark Vergara" />
+    <meta property="og:title" content="Mark Vergara" />
+    <meta
+      property="og:description"
+      content="Obsessed with simplicity, wary of premature optimization, and loyalty to the locality of behavior."
+    />
+    <meta property="og:site_name" content="markvergara.vercel.app" />
+    <meta
+      property="og:image"
+      content="https://markvergara.vercel.app/og-img.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mark Vergara" />
+    <meta
+      name="twitter:description"
+      content="Obsessed with simplicity, wary of premature optimization, and loyalty to the locality of behavior."
+    />
+    <meta
+      name="twitter:image"
+      content="https://markvergara.vercel.app/og-img.png"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  :root {
+    --primary: #dd6e6c;
+    --primary-bg: #1b1a1f;
+  }
+
+  html {
+    background-color: var(--primary-bg);
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      "Noto Sans",
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji";
+  }
+
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #32363f;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: #52575f;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+
+  body::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+</style>
