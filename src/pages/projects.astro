@@ -2,13 +2,13 @@
 import Navbar from "../components/Navbar.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
-import kanbanLight from "../assets/images/kanban-light.avif";
-import nextjsDiscordBotBoilerplate from "../assets/images/nextjs-discord-bot-boilerplate.avif";
-import supadart from "../assets/images/supadart.avif";
-import psauRantWeb from "../assets/images/psau-rant-web.avif";
-import psauRantFlutter from "../assets/images/psau-rant-flutter.avif";
-import reactFirebaseAuthTemplate from "../assets/images/react-firebase-auth-template.avif";
-import nextjsMongoDBPrismaAuthTemplate from "../assets/images/nextjs-mongodb-prisma-auth-template.avif";
+import kanbanLight from "../assets/images/kanban-light.png";
+import nextjsDiscordBotBoilerplate from "../assets/images/nextjs-discord-bot-boilerplate.png";
+import supadart from "../assets/images/supadart.png";
+import psauRantWeb from "../assets/images/psau-rant-web.png";
+import psauRantFlutter from "../assets/images/psau-rant-flutter.png";
+import reactFirebaseAuthTemplate from "../assets/images/react-firebase-auth-template.png";
+import nextjsMongoDBPrismaAuthTemplate from "../assets/images/nextjs-mongodb-prisma-auth-template.png";
 import type { Project } from "../types";
 
 const projects: Project[] = [
@@ -124,6 +124,13 @@ const projects: Project[] = [
     margin-top: 2rem;
     animation: fadeIn 0.5s ease-out forwards;
   }
+
+  @media (max-width: 640px) {
+    .projects-section {
+      margin-top: 0.5rem;
+    }
+  }
+
 
   .project-container {
     display: flex;

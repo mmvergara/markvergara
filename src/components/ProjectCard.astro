@@ -24,9 +24,6 @@ const {
   <Picture
     src={imageUrl}
     class="project-image"
-    formats={["avif", "webp"]}
-    width="200"
-    height="200"
     alt={`${title} project image`}
   />
 
@@ -116,7 +113,7 @@ const {
     padding: 2rem;
     margin-inline: 1.5rem;
     background-color: #202228;
-    border-radius: 0.375rem;
+    border-radius: 0.375rem
     transition: all 0.3s ease;
   }
 
@@ -126,8 +123,8 @@ const {
   }
 
   .project-image {
-    min-width: 200px;
-    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 0.375rem;
     border: 8px solid #1b1a20;
     transition: transform 0.3s ease;

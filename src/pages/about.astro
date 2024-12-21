@@ -69,6 +69,7 @@ import Navbar from "../components/Navbar.astro";
     transform: translateY(20px);
     animation: slideUp 0.5s ease-out forwards;
     animation-delay: 0.3s;
+    margin-top: 1rem;
   }
 
   .experience {
@@ -89,6 +90,18 @@ import Navbar from "../components/Navbar.astro";
   .highlight {
     color: var(--primary);
     font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .about-section {
+      padding-top: 0rem;
+    }
+    .experience {
+      gap: 0;
+    }
+    .bio {
+      margin-top: 0;
+    }
   }
 
   @media (max-width: 768px) {
