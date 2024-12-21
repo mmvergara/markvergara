@@ -17,30 +17,11 @@ export type Technologies =
 
 export type Project = {
   title: string;
-  imageWebpUrl: string;
-  imageUrl: string;
+  imageUrl: ImageMetadata;
   description: string;
-
   technologies: Technologies[];
   liveUrl?: string;
   githubUrl: string;
   deploymentDate: string;
   stars?: number;
 };
-
-// const TechnologiesArr: Technologies[] = [
-//   "React",
-//   "NextJS",
-//   "Typescript",
-//   "Tailwind",
-//   "Dart",
-//   "Flutter",
-//   "Golang",
-//   "Python",
-//   "NodeJS",
-//   "Firebase",
-//   "MongoDB",
-//   "PostgreSQL",
-//   "Supabase",
-//   "Vue",
-// ];

@@ -1,0 +1,209 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import { Icon } from "astro-icon/components";
+import hero from "../assets/images/hero.avif";
+---
+
+<Layout title="Mark Vergara | Dev">
+  <Navbar />
+  <div class="container">
+    <section class="hero">
+      <div class="content">
+        <div class="header">
+          <h1>Mark Vergara</h1>
+          <p>Developer with a dream</p>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://github.com/mmvergara"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="social-btn"
+            data-astro-prefetch="false"
+          >
+            <Icon name="github" size={18} />
+          </a>
+          <a
+            href="mailto:mark.jesusmanabat@gmail.com"
+            class="social-btn"
+            data-astro-prefetch="false"
+          >
+            <Icon name="mail" size={18} />
+          </a>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="social-btn"
+            data-astro-prefetch="false"
+          >
+            <Icon name="book-text" size={18} />
+            <span>Resume</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="profile-image">
+        <img src={hero.src} alt="profile" />
+      </div>
+    </section>
+
+    <section class="bio">
+      <p>
+        Currently a 4th year student but mostly self-taught, I like to build
+        stuff and learn new things.
+      </p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    animation: fadeIn 0.8s ease-in;
+  }
+
+  .header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    color: var(--primary);
+    animation: slideDown 0.5s ease-out;
+  }
+
+  .header p {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #9ca3af;
+    animation: slideUp 0.5s ease-out 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    animation: fadeIn 0.5s ease-out 0.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  .social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #32363f;
+    color: #e0dfd6;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .social-btn:hover {
+    background-color: #52575f;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .profile-image {
+    animation: scaleIn 0.6s ease-out;
+  }
+
+  .profile-image img {
+    height: 200px;
+    width: 200px;
+    border-radius: 9999px;
+    border: 2px solid #9ca3af;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .profile-image img:hover {
+    transform: scale(1.05);
+  }
+
+  .bio {
+    margin-top: 2rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bio p {
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e0dfd6;
+    animation: fadeIn 0.5s ease-out 0.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 640px) {
+    .hero {
+      margin-top: 10vh;
+      flex-direction: row;
+      gap: 3.5rem;
+    }
+
+    .header p {
+      text-align: left;
+    }
+
+    .social-links {
+      justify-content: flex-start;
+    }
+
+    .profile-image img {
+      height: 250px;
+      width: 250px;
+    }
+
+    .bio p {
+      text-align: left;
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
